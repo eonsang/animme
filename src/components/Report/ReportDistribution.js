@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
+import DistributionTurnoverChart from "./DistributionTurnoverChart";
 
 const ReportDistribution = () => {
   const [tab, setTab] = useState(1);
@@ -19,18 +20,18 @@ const ReportDistribution = () => {
             <div className={'tab__contents'}>
               {tab === 1 && (
                 <div className={'content'}>
-                  charts1...
+                  <DistributionTurnoverChart />
                 </div>
               )}
               {tab === 2 && (
                 <div className={'content'}>
-                  charts2...
+                  <DistributionTurnoverChart />
                 </div>
               )}
             </div>
           </div>
         </div>
-        <div className="col">
+        <div className="col col--img">
           <img src="/assets/images/report-bg-img.png" alt=""/>
         </div>
       </div>
@@ -46,7 +47,26 @@ const ReportDistributionLayout = styled.div`
     flex: 1;
     & ~ .col {
       margin-left: 7em;
+      
     }
+    @media screen and (max-width: 1470px) {
+      text-align: center;
+      canvas {
+        width: 100% !important;
+        max-width: 650px;
+        margin:0 auto;
+      }
+      &.col--img {
+        display: none;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  .content {
+    padding: 2em 1em;
   }
 `;
 

@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2089eb8d-5892-4f2c-8800-7e538defd02b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ArtistItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/AuctionChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/NationalCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportAuction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportAuthor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportIssue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportSold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/ReportWorks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/SaleItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Report/Space.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Charts/AverageAnnualSalesChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Charts/MarketShareChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Charts/SecondaryMarketShareChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Charts/TradeValueChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Report/DistributionTurnoverChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Report/RegionChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Report/WrokTurnoverChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Description/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/json/api_20210129.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/json/api_20210129.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportWorks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportWorks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Report/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
@@ -76,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611129878708</updated>
       <workItem from="1611129883455" duration="4904000" />
-      <workItem from="1612072987882" duration="20066000" />
+      <workItem from="1612072987882" duration="30662000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
+import WrokTurnoverChart from "./WrokTurnoverChart";
 
 const ReportWorks = () => {
   const [tab, setTab] = useState(1);
@@ -20,17 +21,17 @@ const ReportWorks = () => {
             <div className={'tab__contents'}>
               {tab === 1 && (
                 <div className={'content'}>
-                  charts1...
+                  <WrokTurnoverChart />
                 </div>
               )}
               {tab === 2 && (
                 <div className={'content'}>
-                  charts2...
+                  <WrokTurnoverChart />
                 </div>
               )}
               {tab === 3 && (
                 <div className={'content'}>
-                  charts3...
+                  <WrokTurnoverChart />
                 </div>
               )}
             </div>
@@ -48,6 +49,12 @@ const ReportWorksLayout = styled.div`
   .col {
     flex: 1;
     max-width: 1100px;
+  }
+  .content {
+    padding: 2em 1em;
+    canvas {
+      width: 100% !important;
+    }
   }
 `;
 

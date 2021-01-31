@@ -66,7 +66,7 @@ const Report = ({
             />
             <Space />
 
-            <ReportRegion />
+            <ReportRegion lastDecadeAuctionInfo={lastDecadeAuctionInfo} />
             <Space />
 
             <ReportWorks />

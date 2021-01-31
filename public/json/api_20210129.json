@@ -11,7 +11,7 @@
 	"auctionEstimatedLow":"300,000,000",
 	"lotNumber":"57A",
 	"auctionTitle":"2012 Sotheby's Hong Kong Contemporary Evening Sale",
-	"lotImages": [ 
+	"lotImages": [
 	                 {"imgSrc":"http://a.jpg","imgSeq":"1"},
 	                 {"imgSrc":"http://b.jpg","imgSeq":"2"}
 				    ],
@@ -151,133 +151,133 @@
 								}
 							],
 	"secondaryMarketShareByValue" : [
-												{									
+												{
 													"title" : "US",
-													"value" : "42"									
+													"value" : "42"
 												},
-												{									
+												{
 													"title" : "Rest of world",
-													"value" : "30"									
+													"value" : "30"
 												},
-												{									
+												{
 													"title" : "China",
-													"value" : "28"									
+													"value" : "28"
 												},
-												{									
+												{
 													"title" : "UK",
-													"value" : "7"								
+													"value" : "7"
 												},
-												{									
+												{
 													"title" : "France",
-													"value" : "6"									
+													"value" : "6"
 												}
-											],	
+											],
     "secondaryMarketShareByVolume" : [
-													{									
+													{
 														"title" : "US",
-														"value" : "42"									
+														"value" : "42"
 													},
-													{									
+													{
 														"title" : "Rest of world",
-														"value" : "30"									
+														"value" : "30"
 													},
-													{									
+													{
 														"title" : "China",
-														"value" : "28"									
+														"value" : "28"
 													},
-													{									
+													{
 														"title" : "UK",
-														"value" : "7"								
+														"value" : "7"
 													},
-													{									
+													{
 														"title" : "France",
-														"value" : "6"								
+														"value" : "6"
 													}
 												],
     "averageAnnualSales" : [
-									{									
+									{
 										"seq" : "1",
 										"title" : "Contemporary",
 										"2018" : "1.9",
 										"2019" : "2.0"
 									},
-									{									
+									{
 										"seq" : "2",
 										"title" : "Contemporary mixed",
 										"2018" : "7.9",
-										"2019" : "9.5"								
+										"2019" : "9.5"
 									},
-									{									
+									{
 										"seq" : "3",
 										"title" : "Modern",
 										"2018" : "9.4",
-										"2019" : "8.8"									
+										"2019" : "8.8"
 									},
-									{									
+									{
 										"seq" : "4",
 										"title" : "Other fine art",
 										"2018" : "7.4",
-										"2019" : "5.0"								
+										"2019" : "5.0"
 									},
-									{									
+									{
 										"seq" : "5",
 										"title" : "Decorative",
 										"2018" : "1.8",
-										"2019" : "1.8"								
+										"2019" : "1.8"
 									}
 								],
      "priceFluctuationFactor" : [
-										{									
+										{
 											"seq" : "1",
 											"title" : "Purchase History",
-											"visible" : "true"										
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "2",
 											"title" : "Artist's Career",
-											"visible" : "true"								
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "3",
 											"title" : "Reinstatement",
-											"visible" : "true"									
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "4",
 											"title" : "Exhibition History",
-											"visible" : "false"								
+											"visible" : "false"
 										},
-										{									
+										{
 											"seq" : "5",
 											"title" : "Literary Reference",
-											"visible" : "true"								
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "6",
 											"title" : "Market's Atmosphere",
-											"visible" : "true"										
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "7",
 											"title" : "Appraisal History",
-											"visible" : "false"								
+											"visible" : "false"
 										},
-										{									
+										{
 											"seq" : "8",
 											"title" : "Provenance History",
-											"visible" : "true"									
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "9",
 											"title" : "Price Fluctuation of Similar Works",
-											"visible" : "true"								
+											"visible" : "true"
 										},
-										{									
+										{
 											"seq" : "10",
 											"title" : "Frequency of Auction Participation",
-											"visible" : "true"								
+											"visible" : "true"
 										}
-									],								
+									],
     "exhibited" : "-",
     "literature" : "-",
 	"artist" : "Roy Lichtenstein",
@@ -285,12 +285,12 @@
 	"marketLevel" : "A" ,
 	"auctionGeuranteeValue" : "TOP10",
 	"topMediums" : [
-	                        { 
+	                        {
 							  "seq" : "1",
 							  "medium" : "Oil",
 							  "ratio" : "58%"
 							},
-							{ 
+							{
 							  "seq" : "2",
 							  "medium" : "Pencil",
 							  "ratio" : "21%"
@@ -343,31 +343,31 @@
 									  {
 									    "seq" : "1",
 										"auction":"Sotheby's",
-										"price" : "7.9M",
+										"price" : "7.9",
 										"cnt" : "681"
 									  },
 									  {
 									    "seq" : "2",
 										"auction":"Christie's",
-										"price" : "1.9M",
+										"price" : "1.9",
 										"cnt" : "427"
 									  },
 									  {
 									    "seq" : "3",
 										"auction":"sotheby's",
-										"price" : "7.9M",
+										"price" : "7.9",
 										"cnt" : "681"
 									  },
 									  {
 									    "seq" : "4",
 										"auction":"sotheby's",
-										"price" : "7.9M",
+										"price" : "7.9",
 										"cnt" : "681"
 									  },
 									  {
 									    "seq" : "5",
 										"auction":"HA",
-										"price" : "0.1M",
+										"price" : "0.1",
 										"cnt" : "141"
 									  }
 									],
@@ -404,7 +404,7 @@
 									  {
 										"seq" : "1",
 										"lotUuid" : " - ",
-										"lotImgSrc" : "http://",										
+										"lotImgSrc" : "http://",
 										"price" : "95,365",
 										"auction" : "2020 Christie's Hong Kong",
 										"sale" : "The Artist's Muse"
@@ -412,7 +412,7 @@
 									  {
 										"seq" : "2",
 										"lotUuid" : " - ",
-										"lotImgSrc" : "http://",										
+										"lotImgSrc" : "http://",
 										"price" : "95,365",
 										"auction" : "2020 Christie's Hong Kong",
 										"sale" : "The Artist's Muse"
@@ -420,7 +420,7 @@
 									  {
 										"seq" : "3",
 										"lotUuid" : " - ",
-										"lotImgSrc" : "http://",										
+										"lotImgSrc" : "http://",
 										"price" : "95,365",
 										"auction" : "2020 Christie's Hong Kong",
 										"sale" : "The Artist's Muse"
@@ -453,7 +453,6 @@
 								"content" : "What Sold at Art Basel in Miami Beach"
 							}
 						  ]
-}						  
-								
-								   
-										
+}
+
+

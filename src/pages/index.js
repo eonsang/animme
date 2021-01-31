@@ -36,8 +36,12 @@ const Home = ({ data }) => {
     historycalPerfomanceWorks,
 
     // charts...
-
+    averageAnnualSales,
     priceFluctuationFactor,
+    secondaryMarketShareByValue,
+    secondaryMarketShareByVolume,
+    tradeVolumesSector,
+    marketShareSector,
 
     // Description
     // TODO: Description에 대한 api 부제
@@ -92,7 +96,13 @@ const Home = ({ data }) => {
           <History
             historycalPerfomanceWorks={historycalPerfomanceWorks}
           />
-          <Charts />
+          <Charts
+            averageAnnualSales={averageAnnualSales}
+            secondaryMarketShareByValue={secondaryMarketShareByValue}
+            secondaryMarketShareByVolume={secondaryMarketShareByVolume}
+            tradeVolumesSector={tradeVolumesSector}
+            marketShareSector={marketShareSector}
+          />
           <PriceFluctuationFactors priceFluctuationFactor={priceFluctuationFactor} />
           <Description />
           <Report

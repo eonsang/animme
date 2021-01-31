@@ -8,7 +8,6 @@ const ReportOverview = ({
   relatedArtists,
   artworkCategory
 }) => {
-  console.log(relatedArtists);
   return (
     <ReportOverviewLayout>
       <div className={'report__header'}>
@@ -55,9 +54,6 @@ const ReportOverview = ({
         <div className="col col--artist">
           <p className={'over_title'}>Related Artists</p>
           <div className={'artists'}>
-            {relatedArtists.map(artist => {
-              return <ArtistItem key={artist.seq} artist={artist} />
-            })}
             {relatedArtists.map(artist => {
               return <ArtistItem key={artist.seq} artist={artist} />
             })}

@@ -63,8 +63,9 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom: 5px;
 
       button {
-        width: 200px;
-        flex: none;
+        flex: 1;
+        max-width: 200px;
+        width: 100%;
         background:#fff;
         height: 50px;
         border-radius: 10px;
