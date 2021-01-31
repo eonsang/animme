@@ -37,7 +37,28 @@ const Home = ({ data }) => {
 
     // charts...
 
-    priceFluctuationFactor
+    priceFluctuationFactor,
+
+    // Description
+    // TODO: Description에 대한 api 부제
+
+    // report
+    artist,
+    artistInfo,
+    marketLevel,
+    auctionGeuranteeValue,
+    topMediums,
+    averageSize,
+    relatedArtists,
+    mostPopularAuction,
+    mostPopularRegion,
+    soldInAuction,
+    unsoldInAuction,
+    priceBidding,
+    lastDecadeAuctionInfo,
+    mostRecentSoldLotList,
+    highestPriceSoldLotList,
+    recentIssueList
   } = data;
 
   return (
@@ -68,14 +89,31 @@ const Home = ({ data }) => {
             artworkTimeline={artworkTimeline}
             artworkTimelineText={artworkTimelineText}
           />
-
           <History
             historycalPerfomanceWorks={historycalPerfomanceWorks}
           />
           <Charts />
           <PriceFluctuationFactors priceFluctuationFactor={priceFluctuationFactor} />
           <Description />
-          <Report />
+          <Report
+            artist={artist}
+            artistInfo={artistInfo}
+            marketLevel={marketLevel}
+            auctionGeuranteeValue={auctionGeuranteeValue}
+            topMediums={topMediums}
+            averageSize={averageSize}
+            relatedArtists={relatedArtists}
+            mostPopularAuction={mostPopularAuction}
+            mostPopularRegion={mostPopularRegion}
+            soldInAuction={soldInAuction}
+            unsoldInAuction={unsoldInAuction}
+            priceBidding={priceBidding}
+            lastDecadeAuctionInfo={lastDecadeAuctionInfo}
+            mostRecentSoldLotList={mostRecentSoldLotList}
+            highestPriceSoldLotList={highestPriceSoldLotList}
+            recentIssueList={recentIssueList}
+            artworkCategory={artworkCategory}
+          />
         </>
       </Container>
     </div>
@@ -88,6 +126,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 1470px) {
     padding-top: 60px;
+    
   }
 `;
 

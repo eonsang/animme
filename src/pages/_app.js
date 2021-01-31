@@ -43,11 +43,48 @@ const GlobalStyle = createGlobalStyle`
   .font-garamond {
     font-family: 'EB Garamond', serif !important;
   }
+  a {
+    text-decoration: none;
+  }
   button {
     appearance: none;
     border: none;
     background: none;
     padding: 0;
+  }
+
+  .tab {
+    .tab__contents {
+      border-radius: 10px;
+      background:#fff;
+    }
+    .tab__buttons {
+      display: flex;
+      margin-bottom: 5px;
+
+      button {
+        width: 200px;
+        flex: none;
+        background:#fff;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 5px;
+        position:relative;
+        outline-width: 0;
+        &.active {
+          &:after {
+            content:'';
+            width: 100%;
+            height: 15px;
+            background:#fff;
+            display: block;
+            position: absolute;
+            left:0;
+            bottom: -5px;
+          }
+        }
+      }
+    }
   }
 `;
 
