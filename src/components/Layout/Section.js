@@ -17,6 +17,12 @@ Section.propTypes = {
 const Layout = styled.div`
   width: 100%;
   padding: 100px 0;
+  @media screen and (max-width: 1470px) {
+    padding: 60px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 40px 0;
+  }
 `;
 
 export default Section;

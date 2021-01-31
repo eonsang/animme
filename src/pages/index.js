@@ -12,8 +12,33 @@ import Report from "../components/Report";
 import { fetchData } from '../actions/data';
 
 const Home = ({ data }) => {
+  const {
+    lotImages,
+    lotArtist,
+    lotTitle,
+    aimmeEstimatedHigh,
+    aimmeEstimatedLow,
+    aimmeGrowth,
+    hammerPrice,
+    currentPrice,
+    auctionCurrency,
+    auctionEstimatedHigh,
+    auctionEstimatedLow,
+    lotNumber,
+    auctionTitle,
 
-  console.log(data);
+    brushStroke,
+    provenance,
+    artworkCategory,
+    artworkTimeline,
+    artworkTimelineText,
+
+    historycalPerfomanceWorks,
+
+    // charts...
+
+    priceFluctuationFactor
+  } = data;
 
   return (
     <div className={'wrapper'}>
@@ -21,11 +46,34 @@ const Home = ({ data }) => {
 
       <Container>
         <>
-          <TopInformation />
-          <Overview />
-          <History />
+          <TopInformation
+            lotImages={lotImages}
+            lotArtist={lotArtist}
+            lotTitle={lotTitle}
+            aimmeEstimatedHigh={aimmeEstimatedHigh}
+            aimmeEstimatedLow={aimmeEstimatedLow}
+            aimmeGrowth={aimmeGrowth}
+            hammerPrice={hammerPrice}
+            currentPrice={currentPrice}
+            auctionCurrency={auctionCurrency}
+            auctionEstimatedHigh={auctionEstimatedHigh}
+            auctionEstimatedLow={auctionEstimatedLow}
+            lotNumber={lotNumber}
+            auctionTitle={auctionTitle}
+          />
+          <Overview
+            brushStroke={brushStroke}
+            provenance={provenance}
+            artworkCategory={artworkCategory}
+            artworkTimeline={artworkTimeline}
+            artworkTimelineText={artworkTimelineText}
+          />
+
+          <History
+            historycalPerfomanceWorks={historycalPerfomanceWorks}
+          />
           <Charts />
-          <PriceFluctuationFactors />
+          <PriceFluctuationFactors priceFluctuationFactor={priceFluctuationFactor} />
           <Description />
           <Report />
         </>
@@ -37,6 +85,10 @@ const Home = ({ data }) => {
 const Container = styled.div`
   padding-top: 100px;
   width: 100%;
+
+  @media screen and (max-width: 1470px) {
+    padding-top: 60px;
+  }
 `;
 
 export default Home;

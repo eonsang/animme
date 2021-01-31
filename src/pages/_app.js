@@ -4,19 +4,52 @@ import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 
 import { wrapper } from '../store';
+import Head from "next/head";
 
-const GlobalStyle = createGlobalStyle`
-  ${reset}
-`;
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>My page title</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <Component {...pageProps} />
     </>
   )
 }
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  * {
+    box-sizing: border-box;
+  }
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  .font-garamond {
+    font-family: 'EB Garamond', serif !important;
+  }
+  button {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+`;
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,

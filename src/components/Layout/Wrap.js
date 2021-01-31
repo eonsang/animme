@@ -17,7 +17,8 @@ Wrap.propTypes = {
 const Layout = styled.div`
   width: 100%;
   // 가로 패딩 235px
-  max-width: calc(100% - 470px);
+  max-width: 1470px;
+  padding:0 10px;
   margin:0 auto;
 `;
 

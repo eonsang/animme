@@ -9,7 +9,7 @@ const Header = () => {
       <Link href="/">
         <a>
           <Image
-            src="/header-logo.png"
+            src="/assets/images/header-logo.png"
             alt="Animme"
             width={108}
             height={28}
@@ -31,6 +31,19 @@ const Layout = styled.header`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media screen and (max-width: 1470px) {
+    padding: 0 10px;
+    height: 60px;
+    background:#fff;
+    img {
+      height: 25px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    img {
+      height: 20px;
+    }
+  }
 `;
 
 export default Header;
