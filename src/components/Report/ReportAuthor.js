@@ -11,7 +11,7 @@ const ReportAuthor = ({
     <ReportAuthorLayout>
       <div className="left">
         <div className={'thumb font-garamond'}>
-          {artist.split('')[0]}
+          {artist?.split('')[0]}
         </div>
         <div className={'info'}>
           <h3 className={'font-garamond'}>{artist}</h3>

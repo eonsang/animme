@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Popover from "react-awesome-popover";
+import PopoverOverlay from "../Popover/PopoverOverlay";
+
 const Info = ({
   lotArtist,
   lotTitle,
@@ -26,6 +29,7 @@ const Info = ({
           {
             // lock state
             (!!0) && (
+
               <div className={'state__lock'}>
                 <h2 className={'font-garamond'}>Subscribers ONLY</h2>
                 <span>
@@ -38,8 +42,13 @@ const Info = ({
           <div className={'state__content'}>
             <p className={'info__title'}>
               Estimated Value of Aimme
-              <button>
-              </button>
+              <Popover action="hover" placement="bottom-start" arrow={false} overlayColor={'transparent'}>
+                <button>
+                </button>
+                <PopoverOverlay>
+                  Hammer price is auction house’s result price and not sure including buyer’s premium, any applicable taxes or artist’s resale right. Please check the auction house’s website for the correct information.
+                </PopoverOverlay>
+              </Popover>
             </p>
             <h3 className={'font-garamond'}>
               $ {aimmeEstimatedLow} ~ {aimmeEstimatedHigh}
@@ -62,16 +71,27 @@ const Info = ({
         <div className="col">
           <p className={'info__title'}>
             Hammer Price
-            <button>
-            </button>
+            <Popover action="hover" placement="bottom-start" arrow={false} overlayColor={'transparent'}>
+              <button>
+              </button>
+              <PopoverOverlay>
+                This is NOT a value of the art market. It reflected inflation and the exchange rate value of the US dollar. Aimme wish this price will be useful to your decision of buy or sell an artwork.
+              </PopoverOverlay>
+            </Popover>
           </p>
           <h3 className={'font-garamond'}>{auctionCurrency} {hammerPrice}</h3>
         </div>
         <div className="col">
           <p className={'info__title'}>
             Current Price
-            <button>
-            </button>
+            <Popover action="hover" placement="bottom-start" arrow={false} overlayColor={'transparent'}>
+              <button>
+              </button>
+              <PopoverOverlay>
+                This price is auction house’s estimate price. Estimates do not reflect the final hammer price and do not include buyer’s premium, any applicable taxes or artist’s resale right. Please check the auction house’s catalogue for more information.
+                Aimme will estimate the price through Market Analysis in 2020.
+              </PopoverOverlay>
+            </Popover>
           </p>
           <h3 className={'font-garamond'}>$ {currentPrice}</h3>
         </div>
@@ -80,8 +100,13 @@ const Info = ({
       <div className="etc">
         <p className={'info__title'}>
           Auction House’s Estimate
-          <button>
-          </button>
+          <Popover action="hover" placement="bottom-start" arrow={false} overlayColor={'transparent'}>
+            <button>
+            </button>
+            <PopoverOverlay>
+              내용필요
+            </PopoverOverlay>
+          </Popover>
         </p>
         <h3 className={'font-garamond'}>{auctionCurrency} {auctionEstimatedLow} ~ ${auctionEstimatedHigh}</h3>
         <br/>

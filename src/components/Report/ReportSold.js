@@ -10,7 +10,7 @@ const ReportSold = ({title, list}) => {
       </div>
 
       <div className="list">
-        {list.map(sale => <SaleItem key={sale.seq} sale={sale} />)}
+        {list?.map(sale => <SaleItem key={sale.seq} sale={sale} />)}
       </div>
     </ReportSoldLayout>
   );

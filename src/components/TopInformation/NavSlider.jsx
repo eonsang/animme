@@ -47,7 +47,7 @@ export default class NavSlider extends React.Component {
             ref={slider => (this.slider1 = slider)}
             {...topSlideSetting}
           >
-            {lotImages.map(img => {
+            {lotImages?.map(img => {
               return (
                 <TopSlideItem key={img.imgSeq}>
                   <div className={'img'} >
@@ -68,7 +68,7 @@ export default class NavSlider extends React.Component {
 
             {...navSlideSetting}
           >
-              {lotImages.map((img) => {
+              {lotImages?.map((img) => {
                 return (
                   <NavSlideItem key={img.imgSeq}>
                     <div className={'img'} >
@@ -116,6 +116,12 @@ const TopSlideItem = styled.div`
     @media screen and (max-width: 1200px) {
       height: 405px;
     }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 `;
 
@@ -135,5 +141,12 @@ const NavSlideItem = styled.div`
     background:#EBEBEB;
     padding: 5px;
     height: 60px;
+  }
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;

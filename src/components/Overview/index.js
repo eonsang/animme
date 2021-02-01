@@ -29,7 +29,7 @@ const Overview = ({
           <div className="row">
             <h3>Artwork Category</h3>
             <ul>
-              {artworkCategory.map((category, index) => {
+              {artworkCategory?.map((category, index) => {
                 return <li key={index}>{category.category}</li>
               })}
             </ul>
@@ -39,7 +39,7 @@ const Overview = ({
             <h3>Artwork Timeline</h3>
 
             <div className={'timeline'}>
-              {artworkTimeline.map(({year, currency, price}, index) => {
+              {artworkTimeline?.map(({year, currency, price}, index) => {
                 return (
                   <div key={index}>
                     {year}
@@ -50,7 +50,7 @@ const Overview = ({
               })}
             </div>
 
-            {artworkTimelineText.map(text => {
+            {artworkTimelineText?.map(text => {
               return <p key={text.seq} dangerouslySetInnerHTML={{__html: text.text}} />
             })}
           </div>

@@ -13,7 +13,7 @@ const History = ({historycalPerfomanceWorks}) => {
           <div className={'historical-chart'}>
             <HistoricalChart historycalPerfomanceWorks={historycalPerfomanceWorks} />
             <div className={'historical-imgs'}>
-              {historycalPerfomanceWorks.map(history => {
+              {historycalPerfomanceWorks?.map(history => {
                 return (
                   <div className={'imgs'} key={history.seq}>
                     <span>
@@ -39,6 +39,7 @@ const HistoryLayout = styled.div`
     font-weight: 600;
   }
   
+  
   .historical-imgs {
     display: flex;
     align-items: center;
@@ -56,6 +57,12 @@ const HistoryLayout = styled.div`
           height: 45px;
           width: 45px;
         }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }

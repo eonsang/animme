@@ -18,7 +18,7 @@ const ReportOverview = ({
         <div className="col">
           <p className={'over_title'}>Artist Category</p>
           <ul className={'category'}>
-            {artworkCategory.map((category, index) => {
+            {artworkCategory?.map((category, index) => {
               return <li key={index}>{category.category}</li>
             })}
           </ul>
@@ -26,7 +26,7 @@ const ReportOverview = ({
           <br/>
           <p className={'over_title'}>Top Two Mediums of Major Deals</p>
           <div className={'majorDeals'}>
-            {topMediums.map(medium => {
+            {topMediums?.map(medium => {
               return (
                 <div key={medium.seq} className={'majorDealItem'}>
                   <div className="img">
@@ -54,7 +54,7 @@ const ReportOverview = ({
         <div className="col col--artist">
           <p className={'over_title'}>Related Artists</p>
           <div className={'artists'}>
-            {relatedArtists.map(artist => {
+            {relatedArtists?.map(artist => {
               return <ArtistItem key={artist.seq} artist={artist} />
             })}
           </div>

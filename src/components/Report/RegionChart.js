@@ -7,7 +7,7 @@ const RegionChart = ({ lastDecadeAuctionInfo }) => {
   const [counts, setCounts] = useState([]);
 
   useEffect(() => {
-    lastDecadeAuctionInfo.map(info => {
+    lastDecadeAuctionInfo?.map(info => {
       setLabels(prevState => ([
         ...prevState,
         info.auction

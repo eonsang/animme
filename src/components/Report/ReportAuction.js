@@ -40,7 +40,7 @@ const ReportAuction = ({
 
         <div className="col">
           <div className="row">
-            {priceBidding.map((bidding, index) => {
+            {priceBidding?.map((bidding, index) => {
               return (
                 <div className="row_col" key={index}>
                   <p>{bidding.type} Price in Bidding</p>

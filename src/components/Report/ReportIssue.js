@@ -13,7 +13,7 @@ const ReportIssue = ({recentIssueList}) => {
       </div>
 
       <ul className={'issueList'}>
-        {recentIssueList.map(issue => {
+        {recentIssueList?.map(issue => {
           return (
             <li key={issue.seq}>
               <div className="date">

@@ -7,7 +7,7 @@ const TradeValueChart = ({ tradeVolumesSector }) => {
   const [data2, setData2] = useState([]);
 
   useEffect(() => {
-    tradeVolumesSector.map(info => {
+    tradeVolumesSector?.map(info => {
       setLabels(prevState => ([
         ...prevState,
         info.year

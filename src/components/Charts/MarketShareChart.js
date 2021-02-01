@@ -8,7 +8,7 @@ const MarketShareChart = ({marketShareSector}) => {
   const [volume, setVolume] = useState([]);
 
   useEffect(() => {
-    marketShareSector.map(info => {
+    marketShareSector?.map(info => {
       setLabels(prevState => ([
         ...prevState,
         info.title

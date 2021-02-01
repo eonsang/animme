@@ -142,13 +142,16 @@ const Container = styled.div`
 
 export default Home;
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   try {
-    const response = await fetchData();
+    const { id } = context.params;
+    const response = await fetchData(id);
     const {data} = response;
+
+    console.log(data);
     return {
       props: {
-        data
+        data: data.responseObject
       }
     }
   }

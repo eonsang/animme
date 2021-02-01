@@ -25,7 +25,7 @@ const PriceFluctuationFactors = ({priceFluctuationFactor}) => {
           <h2>Price Fluctuation Factors</h2>
           <div className={'factorlist'}>
             {
-              priceFluctuationFactor.map(factor => {
+              priceFluctuationFactor?.map(factor => {
                 return <FactorItem key={factor.seq} factor={factor} />
               })
             }

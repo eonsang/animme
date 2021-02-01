@@ -7,7 +7,7 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
   const [data2, setData2] = useState([]);
 
   useEffect(() => {
-    averageAnnualSales.map(info => {
+    averageAnnualSales?.map(info => {
       setLabels(prevState => ([
         ...prevState,
         info.title

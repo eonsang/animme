@@ -8,7 +8,7 @@ const SecondaryMarketShareChart = ({values, title}) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    values.map(value => {
+    values?.map(value => {
       setLabels(prev => ([
         ...prev,
         value.title
