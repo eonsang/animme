@@ -20,14 +20,14 @@ const ReportAuction = ({
       <div className="flex">
         <div className="col">
           <div className="row">
-            <div className="row_col">
+            <div className="row_col row_col--small">
               <p>Most Participated Auction and Region</p>
               <NationalCard
                 mostPopularAuction={mostPopularAuction}
                 mostPopularRegion={mostPopularRegion}
               />
             </div>
-            <div className="row_col">
+            <div className="row_col row_col--small">
               <p>Sold and Unsold in Auction</p>
               <AuctionChart
                 soldInAuction={soldInAuction}
@@ -107,10 +107,29 @@ const ReportAuctionLayout = styled.div`
     .row_col {
       flex: 1;
       max-width: 315px;
+      
       & ~ .row_col {
         margin-left: 3em;
         @media screen and (max-width: 1470px) {
           margin-left: 1em;
+        }
+      }
+      &.row_col--small {
+        max-width: 220px;
+        @media screen and (max-width: 768px) {
+          max-width: 300px;
+          
+          .flex {display: flex;}
+        }
+        
+        &  ~ .row_col {
+          margin-left: 8em;
+          @media screen and (max-width: 1470px) {
+            margin-left: 4em;
+          }
+          @media screen and (max-width: 1200px) {
+            margin-left: 1em;
+          }
         }
       }
       & > p {

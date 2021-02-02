@@ -14,7 +14,7 @@ const RegionChart = ({ lastDecadeAuctionInfo }) => {
       ]));
       setPrices(prevState => ([
         ...prevState,
-        info.price
+        parseFloat(info.price.slice(0, -1), 10)
       ]));
       setCounts(prevState => ([
         ...prevState,

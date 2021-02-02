@@ -5,6 +5,7 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
   const [labels, setLabels] = useState([]);
   const [data1, setData1] = useState([]);
   const [data2, setData2] = useState([]);
+  const [medium, setMedium] = useState([]);
 
   useEffect(() => {
     averageAnnualSales?.map(info => {
@@ -20,6 +21,10 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
         ...prevState,
         info['2019']
       ]))
+      setMedium(prevState => ([
+        ...prevState,
+        info['medium']
+      ]))
     })
   }, []);
 
@@ -28,6 +33,16 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
       data={{
         labels: labels,
         datasets: [
+          {
+            type: 'line',
+            label: 'Medium',
+            data: medium,
+            borderDash: [2],
+            borderColor: "#fff",
+            backgroundColor: 'transparent',
+            borderWidth: 2,
+            order: 2
+          },
           {
             label: '2018',
             data: data1,
@@ -61,7 +76,11 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
               display: false,
               drawBorder: false,
             },
+            ticks: {
+              fontColor: '#fff',
+            }
           }],
+
           yAxes: [{
             position: 'left',
             ticks: {

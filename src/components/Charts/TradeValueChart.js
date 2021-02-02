@@ -21,6 +21,7 @@ const TradeValueChart = ({ tradeVolumesSector }) => {
         info['volume']
       ]))
     })
+
   }, []);
 
   return (
@@ -60,12 +61,15 @@ const TradeValueChart = ({ tradeVolumesSector }) => {
         },
         scales: {
           xAxes: [{
-            barThickness: 30,  // number (pixels) or 'flex'
-            maxBarThickness: 30, // number (pixels)
+            barThickness: 10,  // number (pixels) or 'flex'
+            maxBarThickness: 10, // number (pixels)
             gridLines: {
               display: false,
               drawBorder: false,
             },
+            ticks: {
+              fontColor: '#fff',
+            }
           }],
           yAxes: [{
             id: 'A',

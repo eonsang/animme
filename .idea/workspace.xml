@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2089eb8d-5892-4f2c-8800-7e538defd02b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Popover/PopoverOverlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getRegionName.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Charts/AverageAnnualSalesChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/AverageAnnualSalesChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/MarketShareChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Charts/SecondaryMarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/SecondaryMarketShareChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Charts/TradeValueChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/TradeValueChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/History/HistoricalChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History/HistoricalChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/History/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Overview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Description/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PriceFluctuationFactors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PriceFluctuationFactors/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Report/RegionChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/RegionChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Report/ReportAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportAuction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportAuthor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportAuthor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportIssue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportIssue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportSold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportSold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopInformation/NavSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/NavSlider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/SaleItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/SaleItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +74,8 @@
       <updated>1611129878708</updated>
       <workItem from="1611129883455" duration="4904000" />
       <workItem from="1612072987882" duration="33957000" />
-      <workItem from="1612195182559" duration="1912000" />
+      <workItem from="1612195182559" duration="2444000" />
+      <workItem from="1612304547963" duration="4297000" />
     </task>
     <servers />
   </component>

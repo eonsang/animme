@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import RegionChart from "./RegionChart";
+import getRegionName from "../../utils/getRegionName";
 
 const ReportRegion = ({lastDecadeAuctionInfo}) => {
+
   return (
     <ReportRegionLayout>
       <div className={'report__header'}>
@@ -11,31 +13,18 @@ const ReportRegion = ({lastDecadeAuctionInfo}) => {
 
       <div className={'region__chart'}>
         <div className={'region__chart-imgs'}>
-          <div className="img">
-            <span>
-              <img src="/assets/images/icon-newyork.png" alt=""/>
-            </span>
-          </div>
-          <div className="img">
-            <span>
-              <img src="/assets/images/icon-newyork.png" alt=""/>
-            </span>
-          </div>
-          <div className="img">
-            <span>
-              <img src="/assets/images/icon-newyork.png" alt=""/>
-            </span>
-          </div>
-          <div className="img">
-            <span>
-              <img src="/assets/images/icon-newyork.png" alt=""/>
-            </span>
-          </div>
-          <div className="img">
-            <span>
-              <img src="/assets/images/icon-newyork.png" alt=""/>
-            </span>
-          </div>
+          {
+            lastDecadeAuctionInfo.map(info => {
+              return (
+                <div className="img">
+                  <span>
+                    <img src={`/assets/images/icon-${getRegionName(info.region)}.png`} alt=""/>
+                  </span>
+                </div>
+              )
+            })
+          }
+
         </div>
         <RegionChart lastDecadeAuctionInfo={lastDecadeAuctionInfo} />
       </div>
@@ -83,8 +72,8 @@ const ReportRegionLayout = styled.div`
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 90%;
+        max-height: 90%;
       }
     }
   }

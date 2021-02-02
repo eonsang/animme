@@ -1,45 +1,132 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import styled from 'styled-components';
 import Section from "../Layout/Section";
 import Wrap from "../Layout/Wrap";
+import {GrClose} from "react-icons/gr";
 
-const Description = () => {
+const Description = ({
+ exhibited,
+ essay,
+ literature
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleClickOpenModal = useCallback((title, description) => {
+    setTitle(title);
+    setDescription(description);
+    setIsOpen(true)
+  }, [title, description, isOpen])
+
   return (
     <DescriptionLayout>
       <Section>
         <Wrap>
           <div className="flex">
-            {
-              ['', '', ''].map((item, index) => {
-                return (
-                  <div className="col" key={index}>
-                    <h3 className={'font-garamond'}>Exhibited</h3>
-                    {/*<p dangerouslySetInnerHTML={{__html: text.text}} />*/}
-                    <p>
-                      Salzburg, Galerie Ropac, Andy Warhol, Arbeiten 1962-1986:
-                      August 1987, 1987, nos. 8, 12 (illustrated in colour).
-
-                      Tokyo, Mistukoshi Ltd., Andy Warhol, 1991, p. 152, no. 9
-                      (illustrated in colour, p. 42).
-
-                      Tel Aviv, Tel Aviv Museum of Art, Andy Warhol, 1992, no. 6
-                      (illustrated in colour).
-
-                      Vienna, KunstHaus, Andy Warhol 1928-1987: Works from
-                      the Collection of José Mugrabi and an Isle of Man Company,
-                      1993, p. 101, no. 13 (illustrated in colour, unpaged).
-                    </p>
-                    <button><img src="/assets/images/icon-mor.png" alt=""/></button>
-                  </div>
-                )
-              })
-            }
+            <div className="col">
+              <h3 className={'font-garamond'}>Exhibited</h3>
+              <p dangerouslySetInnerHTML={{__html: `${exhibited.slice(0, 320)}...`}} />
+              <button onClick={() => handleClickOpenModal('Exhibited', exhibited)}><img src="/assets/images/icon-mor.png" alt=""/></button>
+            </div>
+            <div className="col">
+              <h3 className={'font-garamond'}>Literature</h3>
+              <p dangerouslySetInnerHTML={{__html: `${literature.slice(0, 320)}...`}} />
+              <button onClick={() => handleClickOpenModal('Literature', literature)}><img src="/assets/images/icon-mor.png" alt=""/></button>
+            </div>
+            <div className="col">
+              <h3 className={'font-garamond'}>Essay</h3>
+              <p dangerouslySetInnerHTML={{__html: `${essay.slice(0, 320)}...`}} />
+              <button onClick={() => handleClickOpenModal('Essay', essay)}><img src="/assets/images/icon-mor.png" alt=""/></button>
+            </div>
           </div>
         </Wrap>
       </Section>
+
+      {
+        isOpen && <Modal>
+          <div className={'modal__content'}>
+            <button className={'modal__close'} onClick={() => setIsOpen(false)}>
+              <GrClose />
+            </button>
+            <header className={'modal__header'}>
+              <h2 className={'font-garamond'}>{title}</h2>
+            </header>
+            <div className={'modal__body'}>
+              <p dangerouslySetInnerHTML={{__html: description}} />
+            </div>
+          </div>
+        </Modal>
+      }
     </DescriptionLayout>
   );
 };
+
+const Modal = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8000;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .modal__close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    font-size: 30px;
+    right: 40px;
+    top: 40px;
+    z-index: 2;
+    @media screen and (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+      right: 20px;
+      top: 20px;
+      font-size: 20px;
+    }
+  }
+  
+  .modal__content {
+    position: relative;
+    background:#fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 2.5em;
+    max-height: 100vh;
+    overflow: auto;
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+  .modal__body {
+    border-top: 1px solid #222;
+    padding: 1em 0;
+    p {
+      line-height: 1.5em;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .modal__header {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    @media screen and (max-width: 768px) {
+      padding-top: 20px;
+    }
+    
+    h2 {
+      line-height: 1.25em;
+      font-size: 2rem;
+    }
+  }
+`;
 
 const DescriptionLayout = styled.div`
   background:#fff;

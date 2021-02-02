@@ -10,7 +10,7 @@ const FactorItem = memo(({factor}) => {
 
     <FactorItemLayout>
       <div className={'imgs'}>
-        <img src={`/assets/images/icon-factor${factor.seq}.png`} alt=""/>
+        <img src={`/assets/images/icon-factor${factor.seq}.svg`} alt=""/>
       </div>
       <p>{factor.title}</p>
     </FactorItemLayout>
@@ -93,6 +93,7 @@ const FactorItemLayout = styled.div`
     border: 1px solid #FFEBCC;
     border-radius: 50%;
     flex: none;
+    background:#042639;
 
     @media screen and (max-width: 1470px) {
       width: 6rem;

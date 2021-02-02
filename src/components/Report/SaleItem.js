@@ -9,7 +9,7 @@ const SaleItem = ({sale, list = true}) => {
           <img src={sale.lotImgSrc} alt={sale.auction}/>
         </span>
         <div className={'info'}>
-          <h3 className={'font-garamond'}>HKD {sale.price}</h3>
+          <h3 className={'font-garamond'}>$ {sale.price}</h3>
           <p>
             {sale.auction}<br/>
             {sale.sale}

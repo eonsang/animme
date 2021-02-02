@@ -12,6 +12,7 @@ import Report from "../../../../components/Report";
 import { fetchData } from '../../../../actions/data';
 
 const Home = ({ data }) => {
+  console.log(data);
   const {
     lotImages,
     lotArtist,
@@ -44,7 +45,9 @@ const Home = ({ data }) => {
     marketShareSector,
 
     // Description
-    // TODO: Description에 대한 api 부제
+    exhibited,
+    essay,
+    literature,
 
     // report
     artist,
@@ -104,7 +107,11 @@ const Home = ({ data }) => {
             marketShareSector={marketShareSector}
           />
           <PriceFluctuationFactors priceFluctuationFactor={priceFluctuationFactor} />
-          <Description />
+          <Description
+            exhibited={exhibited}
+            essay={essay}
+            literature={literature}
+          />
           <Report
             artist={artist}
             artistInfo={artistInfo}

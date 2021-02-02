@@ -20,6 +20,7 @@ const SecondaryMarketShareChart = ({values, title}) => {
     })
   }, []);
 
+
   return (
     <>
       <h3 className={'font-garamond'}>{title}</h3>
