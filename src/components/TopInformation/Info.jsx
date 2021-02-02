@@ -53,6 +53,7 @@ const Info = ({
             <h3 className={'font-garamond'}>
               $ {aimmeEstimatedLow} ~ {aimmeEstimatedHigh}
             </h3>
+
             <div className={'growth-box'}>
               <p className={'font-garamond'}>
                 Value of Growth prospects
