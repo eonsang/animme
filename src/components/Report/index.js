@@ -28,8 +28,8 @@ const Report = ({
   highestPriceSoldLotList,
   recentIssueList,
   artworkCategory,
-  artistMarketRisk
-
+  artistMarketRisk,
+  lotImages
 }) => {
   return (
     <ReportLayout>
@@ -53,6 +53,7 @@ const Report = ({
               averageSize={averageSize}
               relatedArtists={relatedArtists}
               artworkCategory={artworkCategory}
+              lotImages={lotImages}
             />
             <Space />
 

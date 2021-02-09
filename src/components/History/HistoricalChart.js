@@ -21,6 +21,36 @@ const HistoricalChart = ({ historycalPerfomanceWorks }) => {
   }
 
   const options = {
+
+    events: false,
+    tooltips: {
+      enabled: false
+    },
+    hover: {
+      animationDuration: 0
+    },
+    animation: {
+      duration: 1,
+      onComplete: function () {
+        var chartInstance = this.chart,
+          ctx = chartInstance.ctx;
+        ctx.font = Chart.helpers.fontString('10px', Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+
+        this.data.datasets.forEach(function (dataset, i) {
+          const meta = chartInstance.controller.getDatasetMeta(i);
+          meta.data.forEach(function (bar, index) {
+            bar._yScale.margins.top = 10;
+            let data = dataset.data[index];
+
+            data = '$'  + data;
+            ctx.fillStyle = '#fff'
+            ctx.fillText(data, bar._model.x, bar._model.y - 10);
+          });
+        });
+      }
+    },
     responsive: true,
     maintainAspectRatio: false,
     title: {

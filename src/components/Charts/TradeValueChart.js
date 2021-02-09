@@ -49,6 +49,40 @@ const TradeValueChart = ({ tradeVolumesSector }) => {
         ],
       }}
       options={{
+
+        events: false,
+        tooltips: {
+          enabled: false
+        },
+        hover: {
+          animationDuration: 0
+        },
+        animation: {
+          duration: 1,
+          onComplete: function () {
+            var chartInstance = this.chart,
+              ctx = chartInstance.ctx;
+            ctx.font = Chart.helpers.fontString('10px', Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+
+            this.data.datasets.forEach(function (dataset, i) {
+              const meta = chartInstance.controller.getDatasetMeta(i);
+              meta.data.forEach(function (bar, index) {
+                bar._yScale.margins.top = 10;
+                let data = dataset.data[index];
+
+                if( i === 0 ) {
+                  data = '$'  + data;
+                  ctx.fillStyle = '#333'
+                } else {
+                  return;
+                }
+                ctx.fillText(data, bar._model.x, bar._model.y + 20);
+              });
+            });
+          }
+        },
         responsive: true,
         maintainAspectRatio: false,
         legend: {
@@ -61,8 +95,8 @@ const TradeValueChart = ({ tradeVolumesSector }) => {
         },
         scales: {
           xAxes: [{
-            barThickness: 10,  // number (pixels) or 'flex'
-            maxBarThickness: 10, // number (pixels)
+            barThickness: 30,  // number (pixels) or 'flex'
+            maxBarThickness: 30, // number (pixels)
             gridLines: {
               display: false,
               drawBorder: false,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Section from "../Layout/Section";
 import styled from "styled-components";
 import Wrap from "../Layout/Wrap";
@@ -10,6 +10,28 @@ const Overview = ({
   artworkTimeline,
   artworkTimelineText,
 }) => {
+  const [minPrice, setMinPrice] = useState(null);
+  const [maxPrice, setMaxPrice] = useState(null);
+  const minMaxSpace = 50;
+  const minMaxAvg = (maxPrice - minPrice) / 50;
+
+  artworkTimeline?.map(({price}) => {
+    const numberPrice = parseInt(price.split(',').join(''), 10);
+    if (minPrice === null || minPrice > numberPrice) {
+      setMinPrice(numberPrice);
+    }
+    if (maxPrice === null || maxPrice < numberPrice) {
+      setMaxPrice(numberPrice);
+    }
+  })
+
+  const minTimeLineStyle = {
+    marginBottom: 15,
+  }
+  const maxTimeLineStyle = {
+    marginBottom: 15 + minMaxSpace,
+  }
+
   return (
     <OverviewLayout>
       <Section>
@@ -40,16 +62,28 @@ const Overview = ({
 
             <div className={'timeline'}>
               {artworkTimeline?.map(({year, currency, price}, index) => {
+                const numberPrice = parseInt(price.split(',').join(''), 10);
                 return (
-                  <div key={index}>
-                    {year}
-                    {currency}
-                    {price}
+                  <div className={'timeline__item'} key={index}>
+                    <div className={'timeline__item-box'} style={
+                      numberPrice === minPrice ? minTimeLineStyle
+                        :
+                        numberPrice === maxPrice ? maxTimeLineStyle
+                          :
+                        {
+                          marginBottom: `${(numberPrice - minPrice) / minMaxAvg}px`
+                        }
+                    }>
+                      <div className={'timeline__content'}>
+                        <strong>{currency}</strong>
+                        {price}
+                      </div>
+                    </div>
+                    <span className={'timeline__year'}>{year}</span>
                   </div>
                 )
               })}
             </div>
-
             {artworkTimelineText?.map(text => {
               return <p key={text.seq} dangerouslySetInnerHTML={{__html: text.text}} />
             })}
@@ -62,7 +96,7 @@ const Overview = ({
 
 const OverviewLayout = styled.div`
   background:#FDFCF9;
-  
+
   h2 {
     font-size: 2.5rem;
     line-height:1.3em;
@@ -76,12 +110,70 @@ const OverviewLayout = styled.div`
       font-size: 1.75rem;
     }
   }
-  
+
   .timeline {
     display: flex;
     margin-bottom: 10px;
+    max-width: 450px;
+    position: relative;
+    align-items: flex-end;
+    margin-top: 15px;
+    &:after {
+      content:'';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background:#0C435B;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      z-index: 1;
+    }
   }
-  
+  .timeline__item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .timeline__item-box {
+    text-align: center;
+    color:#fff;
+    border: 1px solid #0C435B;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    margin:0 auto;
+    margin-bottom: 15px;
+    
+    .timeline__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background:#0C435B;
+      border-radius: 50%;
+      font-size:  14px;
+    }
+
+    strong {
+      display: block;
+      font-weight: 600;
+      font-size:  14px;
+    }
+  }
+  .timeline__year {
+    font-size: 1.125rem;
+    color:#0C435B;
+    background:#FDFCF9;
+    font-weight: 600;
+    padding:0 10px;
+    line-height: 20px;
+  }
+
   .row {
     margin-bottom: 1.75em;
     h3 {
@@ -94,7 +186,7 @@ const OverviewLayout = styled.div`
       font-weight: 400;
       line-height: 1.375em;
     }
-    
+
     li {
       color:#0C435B;
       font-weight: 600;

@@ -27,6 +27,7 @@ const ReportRegion = ({lastDecadeAuctionInfo}) => {
 
         </div>
         <RegionChart lastDecadeAuctionInfo={lastDecadeAuctionInfo} />
+        <div className={'bar'} />
       </div>
 
     </ReportRegionLayout>
@@ -38,8 +39,17 @@ const ReportRegionLayout = styled.div`
   .region__chart {
     max-width: 920px;
     width: 100%;
+    position: relative;
     canvas {
       max-height: 250px !important;
+    }
+    .bar {
+      position: absolute;
+      left: 0;
+      bottom: 25px;
+      width: 100%;
+      height: 5px;
+      background:#EEE4D6;
     }
   }
   

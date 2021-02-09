@@ -6,20 +6,23 @@ const ReportOverview = ({
   topMediums,
   averageSize,
   relatedArtists,
-  artworkCategory
+  artworkCategory,
+  lotImages
 }) => {
   const [showScaleBox, setShowScaleBox] = useState(false);
   let sizeX = 0;
   let sizeY = 0;
 
-  averageSize.split('x').map((data, idx) => {
+  // averageSize 변경
+  '239.4 x 175.9'.split('x').map((data, idx) => {
     if(idx === 0) {
-      sizeX = data.trim();
+      sizeX = (data.trim() * 300 / 170) / 765 * 100;
     }
     if(idx === 1) {
-      sizeY = data.trim();
+      sizeY = (data.trim() * 300 / 170) / 765 * 100;
     }
   });
+
 
   return (
     <ReportOverviewLayout>
@@ -75,7 +78,9 @@ const ReportOverview = ({
                   <PickBox
                     sizeX={sizeX}
                     sizeY={sizeY}
-                  />
+                  >
+                    <img src={lotImages[0]?.imgSrc} alt=""/>
+                  </PickBox>
                 </div>
               </div>
               )
@@ -240,12 +245,18 @@ const ReportOverviewLayout = styled.div`
 const PickBox = styled.div`
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 36%;
   transform: translate(-50%, -50%);
   background:#EEEEEE;
   z-index: 5;
-  width: ${props => (`${props.sizeX * 39.2 / 300}%`)};
-  height: ${props => (`${props.sizeY * 39.2 / 300}%`)};
+  width: ${props => (`${props.sizeX * 300 / 300}%`)};
+  height: ${props => (`${props.sizeY * 300 / 300}%`)};
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export default ReportOverview;

@@ -1,7 +1,6 @@
 /**
  * 브라우저 스크롤 위치
  * */
-
 import { useLayoutEffect, useState } from 'react';
 
 export default function useWindowPosition () {

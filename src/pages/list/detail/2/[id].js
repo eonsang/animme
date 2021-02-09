@@ -129,6 +129,7 @@ const Home = ({ data }) => {
             recentIssueList={recentIssueList}
             artworkCategory={artworkCategory}
             artistMarketRisk={artistMarketRisk}
+            lotImages={lotImages}
           />
         </>
       </Container>

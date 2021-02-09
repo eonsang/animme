@@ -47,13 +47,16 @@ const ReportDistributionLayout = styled.div`
     flex: 1;
     & ~ .col {
       margin-left: 7em;
-      
+    }
+    canvas {
+      height: 300px;
     }
     @media screen and (max-width: 1470px) {
       text-align: center;
       canvas {
         width: 100% !important;
         max-width: 650px;
+        height: 250px;
         margin:0 auto;
       }
       &.col--img {

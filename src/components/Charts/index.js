@@ -85,8 +85,12 @@ const ChartLayout = styled.div`
 
     &.chartbg--2 {
       canvas {
-        height: 260px !important;
-        width: 100% !important;
+        height: 300px !important;
+        width: 300px !important;
+        @media screen and (max-width: 1200px) {
+          height: 250px !important;
+          width: 100% !important;
+        }
       }
      
       

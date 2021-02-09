@@ -70,8 +70,8 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
         },
         scales: {
           xAxes: [{
-            barThickness: 25,  // number (pixels) or 'flex'
-            maxBarThickness: 25, // number (pixels)
+            barThickness: 30,  // number (pixels) or 'flex'
+            maxBarThickness: 30, // number (pixels)
             gridLines: {
               display: false,
               drawBorder: false,
@@ -92,6 +92,43 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
             }
           }],
         },
+        events: false,
+        tooltips: {
+          enabled: false
+        },
+        hover: {
+          animationDuration: 0
+        },
+        animation: {
+          duration: 1,
+          onComplete: function () {
+            var chartInstance = this.chart,
+              ctx = chartInstance.ctx;
+            ctx.font = Chart.helpers.fontString('10px', Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+
+            this.data.datasets.forEach(function (dataset, i) {
+              const meta = chartInstance.controller.getDatasetMeta(i);
+              meta.data.forEach(function (bar, index) {
+                bar._yScale.margins.top = 10;
+                let data = dataset.data[index];
+
+                if(i === 0 ) {
+                  return ;
+                }
+                if( i === 1 ) {
+                  data = '$'  + data + 'M';
+                  ctx.fillStyle = '#AB7B6C'
+                } else {
+                  ctx.fillStyle = '#DCB8AE'
+                }
+
+                ctx.fillText(data, bar._model.x, bar._model.y - 5);
+              });
+            });
+          }
+        }
       }}
     />
   );
