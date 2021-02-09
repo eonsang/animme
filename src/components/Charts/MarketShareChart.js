@@ -7,6 +7,14 @@ const MarketShareChart = ({marketShareSector}) => {
   const [value, setValue] = useState([]);
   const [volume, setVolume] = useState([]);
 
+  const colors = [
+    '#FFFFFF',
+    '#A8796C',
+    '#D2AF8D',
+    '#EBCEA6',
+    '#FFEBCC'
+  ];
+
   useEffect(() => {
     marketShareSector?.map(info => {
       setLabels(prevState => ([
@@ -25,6 +33,11 @@ const MarketShareChart = ({marketShareSector}) => {
   }, []);
   return (
     <MarketShareChartLayout>
+      <div className={'labels'}>
+        {labels.map((label, index) => {
+          return (<p className={'font-garamond'} style={{color: colors[index]}} key={index}>{label}</p>)
+        })}
+      </div>
       <div className={'colbox'}>
         <Polar
           data={{
@@ -46,7 +59,7 @@ const MarketShareChart = ({marketShareSector}) => {
             responsive: true,
             maintainAspectRatio: false,
             legend: {
-              display: true,
+              display: false,
               labels: {
                 fontColor: '#fff'
               }
@@ -62,7 +75,6 @@ const MarketShareChart = ({marketShareSector}) => {
         />
         <p className={'font-garamond'}>a. By Value of Sales</p>
       </div>
-
       <div className={'colbox'}>
         <Polar
           data={{
@@ -84,7 +96,7 @@ const MarketShareChart = ({marketShareSector}) => {
             responsive: true,
             maintainAspectRatio: false,
             legend: {
-              display: true,
+              display: false,
               labels: {
                 fontColor: '#fff'
               }
@@ -100,7 +112,6 @@ const MarketShareChart = ({marketShareSector}) => {
         />
         <p className={'font-garamond'}>a. By Volume of Sales</p>
       </div>
-
     </MarketShareChartLayout>
   );
 };
@@ -108,12 +119,32 @@ const MarketShareChart = ({marketShareSector}) => {
 const MarketShareChartLayout = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
+  
+  .labels {
+    position: absolute;
+    top: -.5em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.25em;
+    }
+  }
   @media screen and (max-width: 600px) {
     display: block;
+    .labels {
+      position: relative;
+    }
   }
   .colbox {
     flex: 1;
     text-align: center;
+    position: relative;
+    z-index: 2;
     
     & ~ .colbox {
       margin-left: 2em;
