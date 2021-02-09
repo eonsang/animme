@@ -114,7 +114,7 @@ const Info = ({
         <p className={'info__title'}>
           LOT {lotNumber}
         </p>
-        <h3 className={'font-garamond'}>{auctionTitle}</h3>
+        <h3 className={''}>{auctionTitle}</h3>
       </div>
     </InfoLayout>
   );
@@ -127,6 +127,7 @@ const InfoLayout = styled.div`
     h2 {
       font-size:2.5rem;
       line-height:1.3em;
+      font-weight: 600;
     }
     p {
       font-size: 1.125rem;

@@ -15,19 +15,37 @@ const Chart = ({ averageAnnualSales, secondaryMarketShareByValue, secondaryMarke
     <ChartLayout>
       <Section>
         <Wrap>
-          <div className="flex">
-            <div className="col">
+
+          {/*<div className="flex">*/}
+          {/*  <div className="col">*/}
+          {/*    <h2>Trade Volume : Post-War and Contemporary Sector</h2>*/}
+          {/*    <div className={'chartbg chartbg--1'}>*/}
+          {/*      <TradeValueChart tradeVolumesSector={tradeVolumesSector} />*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*  <div className="col col--2">*/}
+          {/*    <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>*/}
+          {/*    <div className={'chartbg chartbg--2'}>*/}
+          {/*      <MarketShareChart marketShareSector={marketShareSector} />*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
+
+
               <h2>Trade Volume : Post-War and Contemporary Sector</h2>
               <div className={'chartbg chartbg--1'}>
                 <TradeValueChart tradeVolumesSector={tradeVolumesSector} />
               </div>
-            </div>
-            <div className="col col--2">
-              <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>
-              <div className={'chartbg chartbg--2'}>
-                <MarketShareChart marketShareSector={marketShareSector} />
-              </div>
-            </div>
+
+
+        </Wrap>
+      </Section>
+
+      <Section>
+        <Wrap>
+          <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>
+          <div className={'chartbg chartbg--2'}>
+            <MarketShareChart marketShareSector={marketShareSector} />
           </div>
         </Wrap>
       </Section>
@@ -78,22 +96,16 @@ const ChartLayout = styled.div`
     padding: 30px 20px;
     &.chartbg--1 {
       canvas {
-        height: 300px !important;
+        height: 350px !important;
         width: 100% !important;
       }
     }
 
     &.chartbg--2 {
       canvas {
-        height: 300px !important;
-        width: 300px !important;
-        @media screen and (max-width: 1200px) {
-          height: 250px !important;
-          width: 100% !important;
-        }
+        margin:0 auto;
+        height: 310px !important;
       }
-     
-      
     }
     &.chartbg--3 {
       canvas {

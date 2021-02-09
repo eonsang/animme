@@ -2,22 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2089eb8d-5892-4f2c-8800-7e538defd02b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowSize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Charts/AverageAnnualSalesChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/AverageAnnualSalesChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/MarketShareChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Charts/SecondaryMarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/SecondaryMarketShareChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Charts/TradeValueChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/TradeValueChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Charts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Charts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Description/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/History/HistoricalChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History/HistoricalChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Overview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/DistributionTurnoverChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/DistributionTurnoverChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PriceFluctuationFactors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PriceFluctuationFactors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/RegionChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/RegionChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Report/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useWindowPosition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useWindowPosition.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportWorks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportWorks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/WrokTurnoverChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/WrokTurnoverChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useWindowDimensions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useWindowPosition.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/detail/[id].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +69,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/list/detail" />
       <recent name="$PROJECT_DIR$/public/assets/images" />
       <recent name="$PROJECT_DIR$/public/api" />
       <recent name="$PROJECT_DIR$/public" />
@@ -86,7 +90,7 @@
       <workItem from="1612304547963" duration="5167000" />
       <workItem from="1612325188490" duration="24000" />
       <workItem from="1612685790431" duration="4211000" />
-      <workItem from="1612844429725" duration="9233000" />
+      <workItem from="1612844429725" duration="14345000" />
     </task>
     <servers />
   </component>

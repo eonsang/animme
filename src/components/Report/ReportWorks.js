@@ -4,6 +4,7 @@ import WrokTurnoverChart from "./WrokTurnoverChart";
 
 const ReportWorks = () => {
   const [tab, setTab] = useState(1);
+
   return (
     <ReportWorksLayout>
       <div className={'report__header'}>
@@ -54,6 +55,7 @@ const ReportWorksLayout = styled.div`
     padding: 2em 1em;
     canvas {
       width: 100% !important;
+      height: 330px !important;
     }
   }
 `;

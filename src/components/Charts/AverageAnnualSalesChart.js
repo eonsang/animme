@@ -78,9 +78,10 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
             },
             ticks: {
               fontColor: '#fff',
+              fontFamily: "'EB Garamond', sans-serif",
+              fontSize: 14,
             }
           }],
-
           yAxes: [{
             position: 'left',
             ticks: {

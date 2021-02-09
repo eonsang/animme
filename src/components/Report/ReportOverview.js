@@ -16,10 +16,10 @@ const ReportOverview = ({
   // averageSize 변경
   '239.4 x 175.9'.split('x').map((data, idx) => {
     if(idx === 0) {
-      sizeX = (data.trim() * 300 / 170) / 765 * 100;
+      sizeY = (data.trim() * 300 / 170) / 765 * 100;
     }
     if(idx === 1) {
-      sizeY = (data.trim() * 300 / 170) / 765 * 100;
+      sizeX = (data.trim() * 300 / 170) / 765 * 100;
     }
   });
 
@@ -245,7 +245,7 @@ const ReportOverviewLayout = styled.div`
 const PickBox = styled.div`
   position: absolute;
   left: 50%;
-  top: 36%;
+  top: 38%;
   transform: translate(-50%, -50%);
   background:#EEEEEE;
   z-index: 5;

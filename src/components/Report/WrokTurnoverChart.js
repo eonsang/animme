@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import useWindowSize from "../../hooks/useWindowSize";
 
 function randomValue() {
   return Math.floor(Math.random() * 100);
@@ -41,16 +42,43 @@ const data = {
 }
 
 const options = {
+  responsive: true,
+  maintainAspectRatio: false,
   legend: {
     display: false
   },
   scales: {
+    xAxes: [
+      {
+        barThickness: 35,  // number (pixels) or 'flex'
+        maxBarThickness: 35, // number (pixels)
+        gridLines: {
+          display: false,
+        },
+      }
+    ],
     yAxes: [
       {
+        gridLines: {
+          display: false,
+        },
         ticks: {
           beginAtZero: true,
           callback: function(value) {
-            return value + '%';
+            switch (value) {
+              case 0:
+                return '0';
+              case 20:
+                return '20%';
+              case 40:
+                return '40%';
+              case 60:
+                return '60%';
+              case 80:
+                return '80%';
+              case 100:
+                return '100%';
+            }
           }
         },
       },
@@ -58,10 +86,26 @@ const options = {
   },
 }
 
-const WrokTurnoverChart = () => (
+const WrokTurnoverChart = () => {
+  const [width] = useWindowSize();
+  return (
   <>
-    <Bar data={data} options={options} />
+    <Bar data={data} options={width > 768 ? options : {
+      ...options,
+      scales: {
+        ...options.scales,
+        xAxes:  [
+          {
+            barThickness: 15,  // number (pixels) or 'flex'
+            maxBarThickness: 15, // number (pixels)
+            gridLines: {
+              display: false,
+            },
+          }
+        ]
+      }
+    }} />
   </>
-)
+)}
 
 export default WrokTurnoverChart;

@@ -157,12 +157,14 @@ const OverviewLayout = styled.div`
       background:#0C435B;
       border-radius: 50%;
       font-size:  14px;
+      font-weight: 600;
     }
 
     strong {
       display: block;
       font-weight: 600;
       font-size:  14px;
+      margin-bottom: 5px;
     }
   }
   .timeline__year {

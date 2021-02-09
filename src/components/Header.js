@@ -3,8 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-const Header = () => {
-
+const Header = ({
+  hammerPrice,
+  currentPrice
+}) => {
   function useWindowPosition () {
     const [scrollPosition, setPosition] = useState(0);
     useLayoutEffect(() => {
@@ -27,7 +29,7 @@ const Header = () => {
         <Link href="/">
           <a className={'logo'}>
             <Image
-              src="/assets/images/header-logo.png"
+              src="/assets/images/logo.svg"
               alt="Animme"
               width={108}
               height={28}
@@ -41,12 +43,12 @@ const Header = () => {
         <h2 className="name font-garamond">Andy Warhol, <span className={'font-garamond'}>Brillo Soap Pads Box</span></h2>
         <div className={'priceInfo'}>
           <div>
-            <span>Total</span>
-            <strong className={'font-garamond'}>5,568</strong>
+            <span>Hammer Price</span>
+            <strong className={'font-garamond'}>USD {hammerPrice}</strong>
           </div>
           <div>
-            <span>Avg price</span>
-            <strong className={'font-garamond'}>876,124,243,432</strong>
+            <span>Current Price</span>
+            <strong className={'font-garamond'}>$ {currentPrice}</strong>
           </div>
         </div>
       </div>
@@ -74,7 +76,6 @@ const Layout = styled.header`
     @media screen and (max-width: 768px) {
       display: block;
       height: ${props => props.scrollTop > 50 ? '55px' : '0px'};
-      text-align: center;
       .priceInfo {
         margin-top: 12px;
         justify-content: center !important;
@@ -96,6 +97,9 @@ const Layout = styled.header`
         font-size: 1em;
         font-weight: 400;
       }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
     .priceInfo {
       display: flex;
@@ -114,7 +118,7 @@ const Layout = styled.header`
         color:#9A9A9A;
         margin-right: 5px;
         @media screen and (max-width: 768px) {
-          
+         font-size: .875rem; 
         }
       }
       strong {
@@ -122,7 +126,7 @@ const Layout = styled.header`
         color:#333333;
         font-weight: 600;
         @media screen and (max-width: 768px) {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
     }

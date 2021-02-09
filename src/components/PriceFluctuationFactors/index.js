@@ -7,7 +7,6 @@ import Wrap from "../Layout/Wrap";
 // eslint-disable-next-line react/display-name
 const FactorItem = memo(({factor}) => {
   return (
-
     <FactorItemLayout>
       <div className={'imgs'}>
         <img src={`/assets/images/icon-factor${factor.seq}.svg`} alt=""/>
@@ -113,6 +112,7 @@ const FactorItemLayout = styled.div`
     color:#fff;
     line-height: 1.5em;
     padding:0 1em;
+    font-weight: 600;
   }
 `;
 

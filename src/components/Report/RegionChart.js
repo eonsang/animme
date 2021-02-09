@@ -1,18 +1,6 @@
-import React, {useEffect, useState, useLayoutEffect} from 'react';
+import React, {useEffect, useState} from 'react';
+import useWindowSize from '../../hooks/useWindowSize';
 import {Bar} from 'react-chartjs-2'
-
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
 
 const RegionChart = ({ lastDecadeAuctionInfo }) => {
   const [width] = useWindowSize();
@@ -52,6 +40,11 @@ const RegionChart = ({ lastDecadeAuctionInfo }) => {
           display: false,
           drawBorder: false,
         },
+        ticks: {
+          fontFamily: "'EB Garamond', sans-serif",
+          fontColor: '#000',
+          fontStyle: '600'
+        }
       }],
       yAxes: [{
         display: false,
@@ -86,7 +79,6 @@ const RegionChart = ({ lastDecadeAuctionInfo }) => {
       onComplete: function () {
         var chartInstance = this.chart,
           ctx = chartInstance.ctx;
-        ctx.font = Chart.helpers.fontString('10px', Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
         ctx.textAlign = 'center';
         ctx.textBaseline = 'bottom';
 

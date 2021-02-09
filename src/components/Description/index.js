@@ -170,6 +170,7 @@ const DescriptionLayout = styled.div`
     padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid #222;
+    font-weight: 600;
   }
   p {
     font-size: 1rem;

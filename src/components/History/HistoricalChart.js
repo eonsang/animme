@@ -6,11 +6,15 @@ import { Bar } from 'react-chartjs-2'
 
 const HistoricalChart = ({ historycalPerfomanceWorks }) => {
   const data = {
-    labels: historycalPerfomanceWorks?.map(history => history.date),
+    labels: [
+      ...historycalPerfomanceWorks?.map(history => history.date),
+    ],
     datasets: [
       {
         type: 'line',
-        data: historycalPerfomanceWorks?.map(history => history.price),
+        data: [
+          ...historycalPerfomanceWorks?.map(history => history.price)
+        ],
         fill: false,
         borderDash: [5],
         borderColor: '#FFEBCC',
@@ -19,9 +23,7 @@ const HistoricalChart = ({ historycalPerfomanceWorks }) => {
       },
     ],
   }
-
   const options = {
-
     events: false,
     tooltips: {
       enabled: false
@@ -60,6 +62,20 @@ const HistoricalChart = ({ historycalPerfomanceWorks }) => {
       display: false,
     },
     scales: {
+      xAxes: [{
+        barThickness: 30,  // number (pixels) or 'flex'
+        maxBarThickness: 30, // number (pixels)
+        gridLines: {
+          display: false,
+          drawBorder: false,
+        },
+        ticks: {
+          fontSize: 16,
+          fontColor: '#fff',
+          fontFamily: "'EB Garamond', sans-serif",
+
+        }
+      }],
       yAxes: [
         {
           position: 'right',
