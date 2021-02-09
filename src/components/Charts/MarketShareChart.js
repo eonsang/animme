@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
-import {Doughnut} from "react-chartjs-2";
+import {Polar} from "react-chartjs-2";
 
 const MarketShareChart = ({marketShareSector}) => {
   const [labels, setLabels] = useState([]);
@@ -26,7 +26,7 @@ const MarketShareChart = ({marketShareSector}) => {
   return (
     <MarketShareChartLayout>
       <div className={'colbox'}>
-        <Doughnut
+        <Polar
           data={{
             labels: labels,
             datasets: [{
@@ -51,13 +51,20 @@ const MarketShareChart = ({marketShareSector}) => {
                 fontColor: '#fff'
               }
             },
+            scale: {
+              display: true,
+              ticks: {
+                backdropColor: 'rgba(0,0,0,0)',
+                fontColor: 'rgba(0,0,0,0)',
+              }
+            }
           }}
         />
         <p className={'font-garamond'}>a. By Value of Sales</p>
       </div>
 
       <div className={'colbox'}>
-        <Doughnut
+        <Polar
           data={{
             labels: labels,
             datasets: [{
@@ -82,6 +89,13 @@ const MarketShareChart = ({marketShareSector}) => {
                 fontColor: '#fff'
               }
             },
+            scale: {
+              display: true,
+              ticks: {
+                backdropColor: 'rgba(0,0,0,0)',
+                fontColor: 'rgba(0,0,0,0)',
+              }
+            }
           }}
         />
         <p className={'font-garamond'}>a. By Volume of Sales</p>

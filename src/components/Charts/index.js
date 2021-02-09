@@ -16,39 +16,39 @@ const Chart = ({ averageAnnualSales, secondaryMarketShareByValue, secondaryMarke
       <Section>
         <Wrap>
 
-          {/*<div className="flex">*/}
-          {/*  <div className="col">*/}
-          {/*    <h2>Trade Volume : Post-War and Contemporary Sector</h2>*/}
-          {/*    <div className={'chartbg chartbg--1'}>*/}
-          {/*      <TradeValueChart tradeVolumesSector={tradeVolumesSector} />*/}
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*  <div className="col col--2">*/}
-          {/*    <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>*/}
-          {/*    <div className={'chartbg chartbg--2'}>*/}
-          {/*      <MarketShareChart marketShareSector={marketShareSector} />*/}
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
-
-
+          <div className="flex">
+            <div className="col">
               <h2>Trade Volume : Post-War and Contemporary Sector</h2>
               <div className={'chartbg chartbg--1'}>
                 <TradeValueChart tradeVolumesSector={tradeVolumesSector} />
               </div>
-
-
-        </Wrap>
-      </Section>
-
-      <Section>
-        <Wrap>
-          <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>
-          <div className={'chartbg chartbg--2'}>
-            <MarketShareChart marketShareSector={marketShareSector} />
+            </div>
+            <div className="col col--2">
+              <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>
+              <div className={'chartbg chartbg--2'}>
+                <MarketShareChart marketShareSector={marketShareSector} />
+              </div>
+            </div>
           </div>
+
+
+              {/*<h2>Trade Volume : Post-War and Contemporary Sector</h2>*/}
+              {/*<div className={'chartbg chartbg--1'}>*/}
+              {/*  <TradeValueChart tradeVolumesSector={tradeVolumesSector} />*/}
+              {/*</div>*/}
+
+
         </Wrap>
       </Section>
+
+      {/*<Section>*/}
+      {/*  <Wrap>*/}
+      {/*    <h2>Market Share by Sector of the Fine Art Auction Market in 2019</h2>*/}
+      {/*    <div className={'chartbg chartbg--2'}>*/}
+      {/*      <MarketShareChart marketShareSector={marketShareSector} />*/}
+      {/*    </div>*/}
+      {/*  </Wrap>*/}
+      {/*</Section>*/}
 
       <Section>
         <Wrap>
@@ -104,6 +104,7 @@ const ChartLayout = styled.div`
     &.chartbg--2 {
       canvas {
         margin:0 auto;
+        width: 100% !important;
         height: 310px !important;
       }
     }
