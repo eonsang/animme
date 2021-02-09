@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import {Bar} from 'react-chartjs-2'
+import { defaults } from 'react-chartjs-2'
+
+defaults.global.defaultFontFamily =  "'EB Garamond', sans-serif !important";
 
 const RegionChart = ({ lastDecadeAuctionInfo }) => {
   const [width] = useWindowSize();
   const [labels, setLabels] = useState([]);
   const [prices, setPrices] = useState([]);
   const [counts, setCounts] = useState([]);
-
 
   useEffect(() => {
     lastDecadeAuctionInfo?.map(info => {
