@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SaleItem = ({sale, list = true}) => {
+const SaleItem = ({sale, list = true, unit = '$'}) => {
   return (
     <SaleItemLayout list={list}>
       <a href="" target={'_blank'}>
@@ -9,7 +9,7 @@ const SaleItem = ({sale, list = true}) => {
           <img src={sale.lotImgSrc} alt={sale.auction}/>
         </span>
         <div className={'info'}>
-          <h3 className={'font-garamond'}>$ {sale.price}</h3>
+          <h3 className={'font-garamond'}>{unit} {sale.price}</h3>
           <p>
             {sale.auction}<br/>
             {sale.sale}

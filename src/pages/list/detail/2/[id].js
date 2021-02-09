@@ -52,8 +52,6 @@ const Home = ({ data }) => {
     // report
     artist,
     artistInfo,
-    marketLevel,
-    auctionGeuranteeValue,
     topMediums,
     averageSize,
     relatedArtists,
@@ -65,8 +63,10 @@ const Home = ({ data }) => {
     lastDecadeAuctionInfo,
     mostRecentSoldLotList,
     highestPriceSoldLotList,
-    recentIssueList
+    recentIssueList,
+    artistMarketRisk
   } = data;
+
 
   return (
     <div className={'wrapper'}>
@@ -115,8 +115,6 @@ const Home = ({ data }) => {
           <Report
             artist={artist}
             artistInfo={artistInfo}
-            marketLevel={marketLevel}
-            auctionGeuranteeValue={auctionGeuranteeValue}
             topMediums={topMediums}
             averageSize={averageSize}
             relatedArtists={relatedArtists}
@@ -130,6 +128,7 @@ const Home = ({ data }) => {
             highestPriceSoldLotList={highestPriceSoldLotList}
             recentIssueList={recentIssueList}
             artworkCategory={artworkCategory}
+            artistMarketRisk={artistMarketRisk}
           />
         </>
       </Container>

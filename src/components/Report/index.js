@@ -15,8 +15,6 @@ import ReportIssue from "./ReportIssue";
 const Report = ({
   artist,
   artistInfo,
-  marketLevel,
-  auctionGeuranteeValue,
   topMediums,
   averageSize,
   relatedArtists,
@@ -29,7 +27,9 @@ const Report = ({
   mostRecentSoldLotList,
   highestPriceSoldLotList,
   recentIssueList,
-  artworkCategory
+  artworkCategory,
+  artistMarketRisk
+
 }) => {
   return (
     <ReportLayout>
@@ -44,8 +44,7 @@ const Report = ({
             <ReportAuthor
               artist={artist}
               artistInfo={artistInfo}
-              marketLevel={marketLevel}
-              auctionGeuranteeValue={auctionGeuranteeValue}
+              artistMarketRisk={artistMarketRisk}
             />
             <Space />
 
@@ -78,12 +77,14 @@ const Report = ({
             <ReportSold
               title={'This artist’s most recent sold lots'}
               list={mostRecentSoldLotList}
+              unit={'HKD'}
             />
             <Space />
 
             <ReportSold
               title={'The highest price in this artist’s sold lots history'}
               list={highestPriceSoldLotList}
+
             />
             <Space />
 

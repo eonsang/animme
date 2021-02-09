@@ -5,7 +5,8 @@ const ReportAuthor = ({
   artist,
   artistInfo,
   marketLevel,
-  auctionGeuranteeValue
+  auctionGeuranteeValue,
+  artistMarketRisk
 }) => {
   return (
     <ReportAuthorLayout>
@@ -21,7 +22,7 @@ const ReportAuthor = ({
       <div className="right">
         <div className={'col'}>
           <div>
-            <span className={'font-garamond'}>{marketLevel}</span>
+            <span className={'font-garamond levels'}>{artistMarketRisk.marketLevel}</span>
           </div>
           <p>
             Market<br/>
@@ -30,7 +31,19 @@ const ReportAuthor = ({
         </div>
         <div className={'col'}>
           <div>
-            <span className={'font-garamond'}>{auctionGeuranteeValue}</span>
+            <span className={'font-garamond text-center'}>
+              {artistMarketRisk.auctionValue?.split(' ').map((text, index) => {
+                if(index === 0) {
+                  return (
+                    <>
+                      {text}
+                      <br/>
+                    </>
+                  );
+                }
+                return text;
+              })}
+            </span>
           </div>
           <p>
             Auction<br/>
@@ -90,6 +103,10 @@ const ReportAuthorLayout = styled.div`
         border: 1px dashed #222;
         border-radius: 50%;
         font-size: 1.5rem;
+        font-weight: 600;
+        &.levels {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -134,6 +151,10 @@ const ReportAuthorLayout = styled.div`
       width: 100%;
       margin-bottom: 15px;
     }
+  }
+  
+  .text-center {
+    text-align: center;
   }
 `;
 export default ReportAuthor;

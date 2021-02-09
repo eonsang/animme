@@ -14,9 +14,9 @@ const ReportRegion = ({lastDecadeAuctionInfo}) => {
       <div className={'region__chart'}>
         <div className={'region__chart-imgs'}>
           {
-            lastDecadeAuctionInfo.map(info => {
+            lastDecadeAuctionInfo.map((info, index) => {
               return (
-                <div className="img">
+                <div className="img" key={index}>
                   <span>
                     <img src={`/assets/images/icon-${getRegionName(info.region)}.png`} alt=""/>
                   </span>

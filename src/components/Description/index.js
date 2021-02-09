@@ -19,6 +19,10 @@ const Description = ({
     setIsOpen(true)
   }, [title, description, isOpen])
 
+  const handleClickCloseModal = useCallback(() => {
+    setIsOpen(false)
+  }, [isOpen]);
+
   return (
     <DescriptionLayout>
       <Section>
@@ -45,8 +49,9 @@ const Description = ({
 
       {
         isOpen && <Modal>
+          <div className={'modal__bg'} onClick={handleClickCloseModal} />
           <div className={'modal__content'}>
-            <button className={'modal__close'} onClick={() => setIsOpen(false)}>
+            <button className={'modal__close'} onClick={handleClickCloseModal}>
               <GrClose />
             </button>
             <header className={'modal__header'}>
@@ -69,10 +74,19 @@ const Modal = styled.div`
   width: 100%;
   height: 100%;
   z-index: 8000;
-  background: rgba(0,0,0,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  .modal__bg {
+    left: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+  }
   
   .modal__close {
     position: absolute;
@@ -96,9 +110,10 @@ const Modal = styled.div`
     position: relative;
     background:#fff;
     width: 100%;
-    max-width: 800px;
+    max-width: 90vw;
     padding: 2.5em;
-    max-height: 100vh;
+    max-height: 80vh;
+    z-index: 2;
     overflow: auto;
     @media screen and (max-width: 768px) {
       padding: 20px;

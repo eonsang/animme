@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import SaleItem from "./SaleItem";
 
-const ReportSold = ({title, list}) => {
+const ReportSold = ({title, list, unit}) => {
   return (
     <ReportSoldLayout>
       <div className={'report__header'}>
@@ -10,7 +10,7 @@ const ReportSold = ({title, list}) => {
       </div>
 
       <div className="list">
-        {list?.map(sale => <SaleItem key={sale.seq} sale={sale} />)}
+        {list?.map(sale => <SaleItem key={sale.seq} sale={sale} unit={unit} />)}
       </div>
     </ReportSoldLayout>
   );

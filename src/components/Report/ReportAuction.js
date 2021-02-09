@@ -51,7 +51,7 @@ const ReportAuction = ({
                       auction: bidding.lotAuction,
                       sale: bidding.lotSale
                     }}
-                    list={false}
+                    list={!!0}
                   />
                 </div>
               )
@@ -116,8 +116,15 @@ const ReportAuctionLayout = styled.div`
       }
       &.row_col--small {
         max-width: 220px;
+        p {
+          white-space: nowrap;
+          @media screen and (max-width: 1200px) {
+            white-space: normal;
+          }
+        }
         @media screen and (max-width: 768px) {
           max-width: 300px;
+         
           
           .flex {display: flex;}
         }
@@ -128,7 +135,7 @@ const ReportAuctionLayout = styled.div`
             margin-left: 4em;
           }
           @media screen and (max-width: 1200px) {
-            margin-left: 1em;
+            margin-left: 2em;
           }
         }
       }

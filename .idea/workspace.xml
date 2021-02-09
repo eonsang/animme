@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2089eb8d-5892-4f2c-8800-7e538defd02b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-01.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-Bold-02.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-BoldItalic-04.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-CondensedBlack-10.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-CondensedBold-05.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-Italic-03.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-Light-08.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-LightItalic-09.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-Medium-11.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-MediumItalic-12.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-Thin-13.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-ThinItalic-14.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-UltraLight-06.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/HelveticaNeue-UltraLightItalic-07.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Description/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/RegionChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/RegionChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportAuction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportAuction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportAuthor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportAuthor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportOverview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportRegion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/ReportSold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportSold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/SaleItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/SaleItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Report/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/[id].js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/detail/2/[id].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +50,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/list/detail/2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/fonts" />
       <recent name="$PROJECT_DIR$/src/pages/list/detail/2" />
       <recent name="$PROJECT_DIR$/src/components/Charts" />
       <recent name="$PROJECT_DIR$/public/json" />
@@ -63,7 +94,10 @@
       <workItem from="1611129883455" duration="4904000" />
       <workItem from="1612072987882" duration="33957000" />
       <workItem from="1612195182559" duration="2444000" />
-      <workItem from="1612304547963" duration="4581000" />
+      <workItem from="1612304547963" duration="5167000" />
+      <workItem from="1612325188490" duration="24000" />
+      <workItem from="1612685790431" duration="4211000" />
+      <workItem from="1612844429725" duration="3278000" />
     </task>
     <servers />
   </component>

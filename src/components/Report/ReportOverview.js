@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ArtistItem from "./ArtistItem";
 
@@ -8,6 +8,19 @@ const ReportOverview = ({
   relatedArtists,
   artworkCategory
 }) => {
+  const [showScaleBox, setShowScaleBox] = useState(false);
+  let sizeX = 0;
+  let sizeY = 0;
+
+  averageSize.split('x').map((data, idx) => {
+    if(idx === 0) {
+      sizeX = data.trim();
+    }
+    if(idx === 1) {
+      sizeY = data.trim();
+    }
+  });
+
   return (
     <ReportOverviewLayout>
       <div className={'report__header'}>
@@ -48,7 +61,26 @@ const ReportOverview = ({
           </div>
           <div className={'scalebox'}>
             <img src="/assets/images/icon-scale-arrow.png" alt=""/>
-            <a href="#//" className={'link'}>Check the Real Scale</a>
+            <button className={'link'} onClick={() => setShowScaleBox(true)}>
+              Check the Real Scale
+            </button>
+
+
+            {
+              showScaleBox && (
+              <div className={'scalebox__preview'}>
+                <div className={'scalebox__bg'} onClick={() => setShowScaleBox(false)} />
+                <div className={'scalebox__content '}>
+                  <img src="/assets/images/pic-size-bg.png" alt=""/>
+                  <PickBox
+                    sizeX={sizeX}
+                    sizeY={sizeY}
+                  />
+                </div>
+              </div>
+              )
+            }
+
           </div>
         </div>
         <div className="col col--artist">
@@ -133,10 +165,13 @@ const ReportOverviewLayout = styled.div`
     align-items: center;
     margin-top: 1em;
     
+    
+    
     .link {
       flex: 1;
       background:#222;
       color:#fff;
+      font-size: 1rem;
       line-height: 50px;
       text-align: center;
       margin-left: 1em;
@@ -170,6 +205,47 @@ const ReportOverviewLayout = styled.div`
       font-weight: 600;
     }
   }
+
+  .scalebox__preview {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .scalebox__content {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .scalebox__bg {
+      left: 0;
+      top: 0;
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.25);
+    }
+
+  }
+`;
+
+const PickBox = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background:#EEEEEE;
+  z-index: 5;
+  width: ${props => (`${props.sizeX * 39.2 / 300}%`)};
+  height: ${props => (`${props.sizeY * 39.2 / 300}%`)};
 `;
 
 export default ReportOverview;
