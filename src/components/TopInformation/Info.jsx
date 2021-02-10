@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 
 import Popover from "react-awesome-popover";
 import PopoverOverlay from "../Popover/PopoverOverlay";
+import {useRouter} from "next/router";
 
 const Info = ({
   lotArtist,
@@ -18,6 +19,15 @@ const Info = ({
   lotNumber,
   auctionTitle,
 }) => {
+  const [lock, setLock] = useState(false);
+  const router = useRouter()
+  console.log();
+
+  useEffect(() => {
+    if(router.query.lock === '1') {
+      setLock(true)
+    }
+  }, [])
   return (
     <InfoLayout>
       <div className="top">
@@ -28,7 +38,7 @@ const Info = ({
         <div className="state__inner">
           {
             // lock state
-            (!!0) && (
+            (lock) && (
 
               <div className={'state__lock'}>
                 <h2 className={'font-garamond'}>Subscribers ONLY</h2>
