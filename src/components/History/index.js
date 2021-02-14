@@ -35,24 +35,31 @@ const HistoryLayout = styled.div`
   h2 {
     font-size: 1rem;
     color:#fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 600;
   }
-  
   
   .historical-imgs {
     display: flex;
     align-items: center;
-    padding-right: 50px;
+    //padding-right: 50px;
+    position: absolute;
+    width: 100%;
+    padding: 0 calc(10% + 50px) 0 10%;
+    left: 0;
+    bottom: 40px;
+    @media screen and (max-width: 1470px) {
+      padding: 0 50px 0 0;
+    }
     .imgs {
       flex: 1;
-      padding: 5px;
       span {
         margin: 0 auto;
-        background:#0C435B;
         display: block;
-        height: 70px;
-        width: 70px;
+        height: 80px;
+        width: 80px;
+        background:#0C435B;
+        padding: 5px;
         @media screen and (max-width: 768px) {
           height: 45px;
           width: 45px;
@@ -67,17 +74,35 @@ const HistoryLayout = styled.div`
     }
   }
   .historical-chart {
+    position: relative;
     background: url('/assets/images/historical-bg.png') no-repeat center top;
-    background-size: 100% auto;
-    padding: 0 9%;
+    background-size: auto 470px;
+    padding: 0 10%;
+    &:after {
+      content:'';
+      display: block;
+      width: 80%;
+      height: 30px;
+      background:#0C435B;
+      position: absolute;
+      left:10%;
+      bottom: 0;
+      z-index: 1;
+      @media screen and (max-width: 1470px) {
+        left: 0;
+        width: calc(100% - 50px);
+      }
+    }
     @media screen and (max-width: 1470px) {
       background: none;
       padding: 0;
     }
     canvas {
-      height: 390px !important;
+      position: relative;
+      z-index: 2;
+      height: 470px !important;
       @media screen and (max-width: 768px) {
-        height: 250px !important;  
+        height: 370px !important;  
       }
     }
   }

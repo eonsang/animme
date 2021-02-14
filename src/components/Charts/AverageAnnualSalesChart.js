@@ -8,23 +8,25 @@ const AverageAnnualSalesChart = ({ averageAnnualSales }) => {
   const [medium, setMedium] = useState([]);
 
   useEffect(() => {
-    averageAnnualSales?.map(info => {
-      setLabels(prevState => ([
-        ...prevState,
-        info.title
-      ]));
-      setData1(prevState => ([
-        ...prevState,
-        info['2018']
-      ]));
-      setData2(prevState => ([
-        ...prevState,
-        info['2019']
-      ]))
-      setMedium(prevState => ([
-        ...prevState,
-        info['medium']
-      ]))
+    document.fonts.ready.then(function(){
+      averageAnnualSales?.map(info => {
+        setLabels(prevState => ([
+          ...prevState,
+          info.title
+        ]));
+        setData1(prevState => ([
+          ...prevState,
+          info['2018']
+        ]));
+        setData2(prevState => ([
+          ...prevState,
+          info['2019']
+        ]))
+        setMedium(prevState => ([
+          ...prevState,
+          info['medium']
+        ]))
+      })
     })
   }, []);
 

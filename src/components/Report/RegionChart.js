@@ -12,19 +12,21 @@ const RegionChart = ({ lastDecadeAuctionInfo }) => {
   const [counts, setCounts] = useState([]);
 
   useEffect(() => {
-    lastDecadeAuctionInfo?.map(info => {
-      setLabels(prevState => ([
-        ...prevState,
-        info.auction
-      ]));
-      setPrices(prevState => ([
-        ...prevState,
-        parseFloat(info.price.slice(0, -1), 10)
-      ]));
-      setCounts(prevState => ([
-        ...prevState,
-        info.cnt
-      ]))
+    document.fonts.ready.then(function() {
+      lastDecadeAuctionInfo?.map(info => {
+        setLabels(prevState => ([
+          ...prevState,
+          info.auction
+        ]));
+        setPrices(prevState => ([
+          ...prevState,
+          parseFloat(info.price.slice(0, -1), 10)
+        ]));
+        setCounts(prevState => ([
+          ...prevState,
+          info.cnt
+        ]))
+      })
     })
   }, []);
 

@@ -1,28 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { Bar } from 'react-chartjs-2'
+import useWindowSize from "../../hooks/useWindowSize";
 
 
 
 const HistoricalChart = ({ historycalPerfomanceWorks }) => {
-  const data = {
-    labels: [
-      ...historycalPerfomanceWorks?.map(history => history.date),
-    ],
-    datasets: [
-      {
-        type: 'line',
-        data: [
-          ...historycalPerfomanceWorks?.map(history => history.price)
+  const [data, setData] = useState(null);
+  const [width] = useWindowSize();
+
+  useEffect(() => {
+    document.fonts.ready.then(function(){
+      setData({
+        labels: [
+          ...historycalPerfomanceWorks?.map(history => history.date),
         ],
-        fill: false,
-        borderDash: [5],
-        borderColor: '#FFEBCC',
-        pointBackgroundColor: '#FFEBCC',
-        pointBorderWidth: '10px'
-      },
-    ],
-  }
+        datasets: [
+          {
+            type: 'line',
+            data: [
+              ...historycalPerfomanceWorks?.map(history => history.price)
+            ],
+            fill: false,
+            borderDash: [5],
+            borderColor: '#FFEBCC',
+            pointBackgroundColor: '#FFEBCC',
+            pointBorderWidth: '10px'
+          },
+        ],
+      });
+    })
+  }, [])
+
   const options = {
     events: false,
     tooltips: {
@@ -70,15 +79,20 @@ const HistoricalChart = ({ historycalPerfomanceWorks }) => {
           drawBorder: false,
         },
         ticks: {
-          fontSize: 16,
+          fontSize: 14,
           fontColor: '#fff',
+          padding: 100,
           fontFamily: "'EB Garamond', sans-serif",
-
         }
       }],
       yAxes: [
         {
           position: 'right',
+          gridLines: {
+            color:'#073A50',
+            lineWidth: 2,
+            drawBorder: false,
+          },
           ticks: {
             fontColor: '#639DB7',
             beginAtZero: true,
@@ -92,7 +106,30 @@ const HistoricalChart = ({ historycalPerfomanceWorks }) => {
   }
   return (
     <>
-      <Bar data={data} options={options} />
+      {
+        data && (
+          <Bar data={data}  options={width > 768 ? options : {
+            ...options,
+            scales: {
+              ...options.scales,
+              xAxes: [{
+                barThickness: 30,  // number (pixels) or 'flex'
+                maxBarThickness: 30, // number (pixels)
+                gridLines: {
+                  display: false,
+                  drawBorder: false,
+                },
+                ticks: {
+                  fontSize: 14,
+                  fontColor: '#fff',
+                  padding: 60,
+                  fontFamily: "'EB Garamond', sans-serif",
+                }
+              }],
+            }
+          }}/>
+        )
+      }
     </>
   )
 }

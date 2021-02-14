@@ -31,8 +31,8 @@ const Header = ({
             <Image
               src="/assets/images/logo.svg"
               alt="Animme"
-              width={108}
-              height={28}
+              width={91}
+              height={23}
             />
           </a>
         </Link>
@@ -62,7 +62,7 @@ const Layout = styled.header`
   top: 0;
   width: 100%;
   z-index: 2000;
-  padding:0 85px;
+  padding:0 105px;
   background:#fff;
   @media screen and (max-width: 1470px) {
     padding: 0 10px;
@@ -70,12 +70,14 @@ const Layout = styled.header`
   .header__bottom {
     display: flex;
     align-items: center;
-    height: ${props => props.scrollTop > 50 ? '50px' : '0px'};
+    height: ${props => props.scrollTop > 50 ? 'auto' : '0px'};
+    padding-bottom: ${props => props.scrollTop > 50 ? '25px' : '0px'};
     overflow: hidden;
     transition: all .3s;
     @media screen and (max-width: 768px) {
       display: block;
-      height: ${props => props.scrollTop > 50 ? '55px' : '0px'};
+      //height: ${props => props.scrollTop > 50 ? '55px' : '0px'};
+      padding-bottom: ${props => props.scrollTop > 50 ? '5px' : '0px'};
       .priceInfo {
         margin-top: 12px;
         justify-content: center !important;
@@ -108,23 +110,23 @@ const Layout = styled.header`
       
       div {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         & ~ div {
           margin-left: 2em;
         }
       }
       span {
-        font-size: 1.25rem;
+        font-size: 1rem;
         color:#9A9A9A;
         margin-right: 5px;
+        font-weight: 300;
         @media screen and (max-width: 768px) {
          font-size: .875rem; 
         }
       }
       strong {
-        font-size: 1.75rem;
-        color:#333333;
-        font-weight: 600;
+        font-size: 1.5rem;
+        color:#000;
         @media screen and (max-width: 768px) {
           font-size: 1.25rem;
         }
@@ -132,7 +134,7 @@ const Layout = styled.header`
     }
   }
   .header__top {
-    height: ${props => props.scrollTop > 50 ? '60px' : '100px'};
+    height: ${props => props.scrollTop > 50 ? '85px' : '100px'};
     width: 100%;
     display: flex;
     align-items: center;
@@ -156,6 +158,8 @@ const Layout = styled.header`
   }
   .each-link {
     margin-left:  2em;
+    font-size: 1rem;
+    letter-spacing: .3px;
     color:#000;
   }
   

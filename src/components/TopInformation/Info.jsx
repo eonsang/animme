@@ -21,8 +21,6 @@ const Info = ({
 }) => {
   const [lock, setLock] = useState(false);
   const router = useRouter()
-  console.log();
-
   useEffect(() => {
     if(router.query.lock === '1') {
       setLock(true)
