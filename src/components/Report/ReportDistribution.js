@@ -48,20 +48,23 @@ const ReportDistributionLayout = styled.div`
     & ~ .col {
       margin-left: 7em;
     }
-    canvas {
-      height: 300px;
-    }
     .content {
       padding: 3em 1em;
+      canvas {
+        height: 310px;
+      }
     }
     @media screen and (max-width: 1470px) {
       text-align: center;
-      canvas {
-        width: 100% !important;
-        max-width: 650px;
-        height: 300px;
-        margin:0 auto;
+      .content {
+        canvas {
+          width: 100% !important;
+          max-width: 650px;
+          height: 300px;
+          margin:0 auto;
+        }
       }
+      
       &.col--img {
         display: none;
       }

@@ -37,7 +37,7 @@ const Header = ({
           </a>
         </Link>
         <a href="" className={'each-link'}>Contact</a>
-        <a href="" className={'each-link'}>About</a>
+        <a href="" className={'each-link'}>About us</a>
       </div>
       <div className={'header__bottom'}>
         <h2 className="name font-garamond">Andy Warhol, <span className={'font-garamond'}>Brillo Soap Pads Box</span></h2>
@@ -160,6 +160,7 @@ const Layout = styled.header`
     margin-left:  2em;
     font-size: 1rem;
     letter-spacing: .3px;
+    font-weight: 600;
     color:#000;
   }
   

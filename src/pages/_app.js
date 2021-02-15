@@ -52,6 +52,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 12px;
     }
   }
+  .font-helveticaneue {
+    font-family: 'HelveticaNeue', serif !important;
+    
+  }
   .font-garamond {
     font-family: 'EB Garamond', serif !important;
   }

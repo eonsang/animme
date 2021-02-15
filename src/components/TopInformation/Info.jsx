@@ -122,7 +122,7 @@ const Info = ({
         <p className={'info__title'}>
           LOT {lotNumber}
         </p>
-        <h3 className={''}>{auctionTitle}</h3>
+        <h4 className={'font-helveticaneue'}>{auctionTitle}</h4>
       </div>
     </InfoLayout>
   );
@@ -145,6 +145,7 @@ const InfoLayout = styled.div`
   
   .etc {
     padding-top: 15px;
+    h4,
     h3 {
       font-size: 1.125rem;
       font-weight: 600;
@@ -243,11 +244,21 @@ const InfoLayout = styled.div`
     height: 100%;
     background: rgba(255,255,255,.8);
     border: 1px solid #DC604D;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    &:after {
+      content:'';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: block;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border: 1px solid #DC604D;
+    }
     
     button {
       position: absolute;
