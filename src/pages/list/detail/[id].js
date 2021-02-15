@@ -12,7 +12,6 @@ import Report from "../../../components/Report";
 import { fetchData } from '../../../actions/data';
 
 const Home = ({ data }) => {
-  console.log(data);
   const {
     lotImages,
     lotArtist,

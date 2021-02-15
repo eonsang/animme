@@ -19,14 +19,14 @@ const ReportDistribution = () => {
             </div>
             <div className={'tab__contents'}>
               {tab === 1 && (
-                <div className={'content'}>
+                <article className={'chart-content'}>
                   <DistributionTurnoverChart />
-                </div>
+                </article>
               )}
               {tab === 2 && (
-                <div className={'content'}>
+                <article className={'chart-content'}>
                   <DistributionTurnoverChart />
-                </div>
+                </article>
               )}
             </div>
           </div>
@@ -48,7 +48,7 @@ const ReportDistributionLayout = styled.div`
     & ~ .col {
       margin-left: 7em;
     }
-    .content {
+    .chart-content {
       padding: 3em 1em;
       canvas {
         height: 310px;
@@ -56,7 +56,7 @@ const ReportDistributionLayout = styled.div`
     }
     @media screen and (max-width: 1470px) {
       text-align: center;
-      .content {
+      .chart-content {
         canvas {
           width: 100% !important;
           max-width: 650px;

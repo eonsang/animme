@@ -6,7 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Report/ReportDistribution.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/detail/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/detail/[id].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
       <workItem from="1612909902478" duration="2965000" />
       <workItem from="1612949616666" duration="501000" />
       <workItem from="1613323470153" duration="3295000" />
-      <workItem from="1613364182674" duration="1149000" />
+      <workItem from="1613364182674" duration="1858000" />
     </task>
     <servers />
   </component>

@@ -43,7 +43,7 @@ const Info = ({
                 <span>
               <img src="/assets/images/icon-lock.png" alt=""/>
             </span>
-                <button className={'font-garamond'}>Unlock</button>
+                <button className={'font-garamond'} onClick={() => setLock(false)}>Unlock</button>
               </div>
             )
           }
@@ -258,6 +258,7 @@ const InfoLayout = styled.div`
       width: calc(100% - 10px);
       height: calc(100% - 10px);
       border: 1px solid #DC604D;
+      z-index: 1;
     }
     
     button {
@@ -270,6 +271,7 @@ const InfoLayout = styled.div`
       background: url('/assets/images/icon-unlock.png') no-repeat left center;
       padding-left: 20px;
       cursor: pointer;
+      z-index: 2;
     }
     
     h2 {

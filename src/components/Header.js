@@ -160,7 +160,6 @@ const Layout = styled.header`
     margin-left:  2em;
     font-size: 1rem;
     letter-spacing: .3px;
-    font-weight: 600;
     color:#000;
   }
   
