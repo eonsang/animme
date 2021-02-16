@@ -6,11 +6,11 @@ import styled from "styled-components";
 const GrowthBox = ({aimmeGrowth}) => {
   return (
     <GrowthBoxLayout>
-      <p className={''}>
+      <p className={'font-garamond'}>
         Value of Growth prospects
       </p>
       <div className={'growth2'}>
-        <span className={''}>{aimmeGrowth}</span>
+        <span className={'font-garamond'}>{aimmeGrowth}</span>
         <Popover action="hover" placement="bottom-start" arrow={false} overlayColor={'transparent'}>
           <button>
           </button>
@@ -24,7 +24,7 @@ const GrowthBox = ({aimmeGrowth}) => {
 };
 
 
-const GrowthBoxLayout = styled.div`
+const GrowthBoxLayout = styled.article`
   display: flex;
   margin-top: 10px;
   align-content: center;

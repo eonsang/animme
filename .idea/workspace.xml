@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2089eb8d-5892-4f2c-8800-7e538defd02b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TopInformation/GrowthBox.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopInformation/GrowthBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopInformation/GrowthBox.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1613364182674" duration="2386000" />
       <workItem from="1613454615348" duration="268000" />
       <workItem from="1613462299439" duration="22000" />
-      <workItem from="1613463044780" duration="484000" />
+      <workItem from="1613463044780" duration="730000" />
     </task>
     <servers />
   </component>
