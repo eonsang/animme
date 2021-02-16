@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Popover from "react-awesome-popover";
 import PopoverOverlay from "../Popover/PopoverOverlay";
 import {useRouter} from "next/router";
+import GrowthBox from "./GrowthBox";
 
 const Info = ({
   lotArtist,
@@ -61,17 +62,7 @@ const Info = ({
             <h3 className={'font-garamond'}>
               $ {aimmeEstimatedLow} ~ {aimmeEstimatedHigh}
             </h3>
-
-            <div className={'growth-box'}>
-              <p className={'font-garamond'}>
-                Value of Growth prospects
-              </p>
-              <div className={'growth'}>
-                <span className={'font-garamond'}>{aimmeGrowth}</span>
-                <button>
-                </button>
-              </div>
-            </div>
+            <GrowthBox aimmeGrowth={aimmeGrowth} />
           </div>
         </div>
       </div>
@@ -182,38 +173,7 @@ const InfoLayout = styled.div`
     }
   }
   
-  .growth-box {
-    display: flex;
-    margin-top: 10px;
-    align-content: center;
-    
-    p {
-      color:#45A391;
-      font-size: 1rem;
-      line-height: 24px;
-    }
-    
-    .growth {
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      span {
-        color:#45A391;
-        background: url('/assets/images/icon-growth-up.png') no-repeat left center;
-        padding-left: 25px;
-        line-height: 24px;
-        font-size: 1.875rem;
-
-      }
-    }
-    button {
-      margin-left: 10px;
-      background: url('/assets/images/icon-popover.png') no-repeat center;
-      background-size: 100% 100%;
-      width: 1.125rem;
-      height: 1.125rem;
-    }
-  }
+  
   
   .state {
     padding: 5px 0;
@@ -282,5 +242,6 @@ const InfoLayout = styled.div`
     }
   }
 `;
+
 
 export default Info;
