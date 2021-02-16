@@ -51,7 +51,7 @@ const ReportDistributionLayout = styled.div`
     .chart-content {
       padding: 3em 1em;
       canvas {
-        height: 310px;
+        height: 310px !important;
       }
     }
     @media screen and (max-width: 1470px) {
@@ -60,7 +60,7 @@ const ReportDistributionLayout = styled.div`
         canvas {
           width: 100% !important;
           max-width: 650px;
-          height: 300px;
+          height: 300px !important;
           margin:0 auto;
         }
       }
